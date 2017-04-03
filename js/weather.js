@@ -26,18 +26,21 @@ function weatherFunc() {
             console.log(response);
             console.log('json url ' + queryURL);
 
-
-
-            // $("#weather").append("bye");
-                $("#weather").html(
-                "<div class=\"panel panel-default\"><div class=\"panel-heading panel-title\">"+
+            var weatherDiv = $("<div>");
+            weatherDiv.addClass("weather-display")
+            weatherDiv.html(
+                
+                "<div class=\"panel panel-default weather-display\"><div class=\"panel-heading panel-title\">"+
                 city+" Weather</div>" +
                 "<div class=\"panel-body\">" + 
                 "<img src=\"https:"+weatherImg+"\">"+ "<br>"+
                 "Current Weather: " + weather + "<br>" +
                 "Current Temperature: " + temp + "°F / " +
                 "Feels Like: " + feelsLike + "°F<br>" +
-                "Humidity: " + humidity + "</div></div>");
+                "Humidity: " + humidity)
+
+            // $("#weather").append("bye");
+                $("#weather").html(weatherDiv);
 
         });
     };
