@@ -19,8 +19,10 @@ function weatherFunc() {
             var weather = response.current.condition.text;
             var weatherImg = response.current.condition.icon;
             var temp = response.current.temp_f;
+            var tempC = response.current.temp_c;
             var humidity = response.current.humidity;
             var feelsLike = response.current.feelslike_f;
+            var feelsLikeC = response.current.feelslike_c;
             city = response.location.name;
 
             console.log(response);
@@ -30,13 +32,13 @@ function weatherFunc() {
             weatherDiv.addClass("weather-display")
             weatherDiv.html(
                 
-                "<div class=\"panel panel-default weather-display\"><div class=\"panel-heading panel-title\">"+
+                "<div class=\"panel panel-default weather-display\"><div class=\"panel-heading panel-title weather-title\">"+
                 city+" Weather</div>" +
                 "<div class=\"panel-body\">" + 
                 "<img src=\"https:"+weatherImg+"\">"+ "<br>"+
                 "Current Weather: " + weather + "<br>" +
-                "Current Temperature: " + temp + "°F / " +
-                "Feels Like: " + feelsLike + "°F<br>" +
+                "<span class=\"temperature\" data-category=\"Current Temperature: \" data-f=\""+temp+"\" data-c=\""+tempC+"\" data-state=\"fahrenheit\">Current Temperature: " + temp + "°F</span>" + "<br>"+
+                "<span class=\"temperature\" data-category=\"Feels Like: \" data-f=\""+feelsLike+"\" data-c=\""+feelsLikeC+"\" data-state=\"fahrenheit\">Feels Like: " + feelsLike + "°F</span>" + "<br>"+
                 "Humidity: " + humidity)
 
             // $("#weather").append("bye");
@@ -45,6 +47,19 @@ function weatherFunc() {
         });
     };
     weatherFunc();
+
+$("#weather").on("click", "span", function() {
+    var state = $(this).attr("data-state");
+    console.log(state);
+
+     if (state === "fahrenheit") {
+        $(this).text($(this).attr("data-category")+$(this).attr("data-c")+"°C");
+        $(this).attr("data-state", "celcius");
+      } else {
+        $(this).text($(this).attr("data-category")+$(this).attr("data-f")+"°F");
+        $(this).attr("data-state", "fahrenheit");
+      }
+});
 
     // $("#destination-submit").on("click", function(event) {
     //     event.preventDefault();
