@@ -559,7 +559,7 @@ aside.clients img {
 }
 section#contact {
   background-color: #222222;
-  background-image: url('../img/map-image.png');
+  background-image: url('../img/weatherbg.jpg');
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -762,6 +762,7 @@ body {
   color: white;
   text-shadow: 2px 2px #777777;
 }
+
 /*.img-div{
   background-color: red;
   width: 100%;
@@ -776,3 +777,4 @@ body {
   background-color: yellow;
 }
 */
+
