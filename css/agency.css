@@ -559,7 +559,7 @@ aside.clients img {
 }
 section#contact {
   background-color: #222222;
-  background-image: url('../img/map-image.png');
+  background-image: url('../img/weatherbg.jpg');
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -749,6 +749,7 @@ body {
   webkit-tap-highlight-color: #fed136;
 }
 
+<<<<<<< HEAD
 
 /*.img-div{
   background-color: red;
@@ -764,3 +765,18 @@ body {
   background-color: yellow;
 }
 */
+=======
+.weather-display {
+  text-align: center;
+  color: #777777;
+}
+
+.weather-title {
+  color: #777777;
+}
+
+.weather-description {
+  color: white;
+  text-shadow: 2px 2px #777777;
+}
+>>>>>>> cb59f64e65181d68c41688d42772472ad3619d3a
