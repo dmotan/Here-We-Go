@@ -1,8 +1,7 @@
-var city;
+var city = "jersey city";
 // alert('test');
 
 function weatherFunc() {
-    city = "rome";
     console.log('city ' + city)
 
     var APIKEY = "bdb324a30b314e7592c232435173003";
@@ -47,37 +46,49 @@ function weatherFunc() {
         panelBody.append(weatherIcon);
         panelBody.append("<br>Current Weather: "+weather+"<br>");
         panelBody.append(currentTemp);
-        panelBody.append("Humidity: "+humidity);
+        panelBody.append("Humidity: "+humidity+"%");
 
         weatherDiv.append(panelHeading);
         weatherDiv.append(panelBody);
 
         $("#weather-content").html(weatherDiv);
 
-        if (weatherCode === 1000){
+        if (weatherCode <= 1000){
             //it's sunny
+            $("#weather").css("background-image", "url('img/weather/sunny.jpg')");
         } else if (weatherCode >1000 && weatherCode <= 1009){
             //it's cloudy
+            $("#weather").css("background-image", "url('img/weather/cloudy.jpg')");
         } else if (weatherCode > 1009 && weatherCode <= 1063){
             //it's misty
+            $("#weather").css("background-image", "url('img/weather/fog.jpg')");
         } else if (weatherCode > 1063 && weatherCode <= 1069){
             //it's patch snow/sleet
+            $("#weather").css("background-image", "url('img/weather/snow.jpg')");
         } else if (weatherCode > 1069 && weatherCode <= 1087){
             //it's freezing mist/thunder outbreaks
+            $("#weather").css("background-image", "url('img/weather/fog.jpg')");
         } else if (weatherCode > 1087 && weatherCode <= 1117){
             //it's snowing
+            $("#weather").css("background-image", "url('img/weather/snow.jpg')");
         } else if (weatherCode > 1117 && weatherCode <= 1147){
             //it's foggy
+            $("#weather").css("background-image", "url('img/weather/fog.jpg')");
         } else if (weatherCode > 1147 && weatherCode <= 1201){
             //it's raining
+            $("#weather").css("background-image", "url('img/weather/rain.jpg')");
         } else if (weatherCode > 1201 && weatherCode <= 1237){
             //it's sleet/snowing
+            $("#weather").css("background-image", "url('img/weather/snow.jpg')");
         } else if (weatherCode > 1237 && weatherCode <= 1246){
             //it's raining
+            $("#weather").css("background-image", "url('img/weather/rain.jpg')");
         } else if (weatherCode > 1246 && weatherCode <= 1264){
             //it's snowing
+            $("#weather").css("background-image", "url('img/weather/snow.jpg')");
         } else if (weatherCode > 1264 && weatherCode <= 1282){
             //it's thundering
+            $("#weather").css("background-image", "url('img/weather/thunder.jpg')");
         };
 
 
