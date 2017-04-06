@@ -577,46 +577,46 @@ aside.clients img {
     margin: 50px auto;
 }
 
-section#contact {
+section#weather {
     background-color: #222222;
     background-image: url('../img/weather/default.png');
     background-position: center;
     background-repeat: no-repeat;
 }
 
-section#contact .section-heading {
+section#weather .section-heading {
     color: white;
 }
 
-section#contact .form-group {
+section#weather .form-group {
     margin-bottom: 25px;
 }
 
-section#contact .form-group input, section#contact .form-group textarea {
+section#weather .form-group input, section#weather .form-group textarea {
     padding: 20px;
 }
 
-section#contact .form-group input.ntrol {
+section#weather .form-group input.ntrol {
     height: auto;
 }
 
-section#contact .form-group textarea.ntrol {
+section#weather .form-group textarea.ntrol {
     height: 236px;
 }
 
-section#contact .ntrol:focus {
+section#weather .ntrol:focus {
     border-color: #fed136;
     box-shadow: none;
 }
 
-section#contact ::-webkit-input-placeholder {
+section#weather ::-webkit-input-placeholder {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     color: #eeeeee;
 }
 
-section#contact :-moz-placeholder {
+section#weather :-moz-placeholder {
     /* Firefox 18- */
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -624,7 +624,7 @@ section#contact :-moz-placeholder {
     color: #eeeeee;
 }
 
-section#contact ::-moz-placeholder {
+section#weather ::-moz-placeholder {
     /* Firefox 19+ */
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -632,14 +632,14 @@ section#contact ::-moz-placeholder {
     color: #eeeeee;
 }
 
-section#contact :-ms-input-placeholder {
+section#weather :-ms-input-placeholder {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     color: #eeeeee;
 }
 
-section#contact .text-danger {
+section#weather .text-danger {
     color: #e74c3c;
 }
 

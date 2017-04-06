@@ -52,7 +52,7 @@ function weatherFunc() {
         weatherDiv.append(panelHeading);
         weatherDiv.append(panelBody);
 
-        $("#weather").html(weatherDiv);
+        $("#weather-content").html(weatherDiv);
 
         if (weatherCode === 1000){
             //it's sunny
