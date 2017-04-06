@@ -763,3 +763,41 @@ body {
   text-shadow: 2px 2px #777777;
 }
 
+.img-div{
+  margin-top: 10px;
+}
+.flag-img{
+  width: 300px;
+  height: 200px;
+}
+.info-div{
+  margin-top: 10px;
+   background-color: #ebebeb;
+  border-radius: 10px;
+  padding: 10px;
+}
+.news-div-slider{
+  text-align: center;
+  margin-top: 20px;
+  width:700px;
+  height: 200px;
+}
+.slider-img-div{
+  width:100px;
+  height: 100px;
+}
+.slider-img{
+  width:200px;
+  height: 200px;
+}
+.news-col{
+  margin: auto;
+  text-align: center;
+}
+#news{
+  background-color: gray;
+}
+.news-header{
+  width:300px;
+  height: 200px;
+}
