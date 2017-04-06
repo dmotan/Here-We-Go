@@ -801,6 +801,7 @@ body {
 .weather-display {
     text-align: center;
     color: #777777;
+    position: relative;
 }
 
 .weather-title {
@@ -810,6 +811,24 @@ body {
 .weather-description {
     color: white;
     text-shadow: 2px 2px #777777;
+}
+
+.weather-display .weather-tooltiptext {
+    visibility: hidden;
+    background-color: #F5F5F5;
+    color: #777777;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    right: 5%;
+    z-index: 1;
+}
+
+.weather-display:hover .weather-tooltiptext {
+    visibility: visible;
 }
 
 .intro-text .form-control {
