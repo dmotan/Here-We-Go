@@ -16,6 +16,8 @@ function weatherFunc() {
     }).done(function(response) {
 
         var weather = response.current.condition.text;
+        var weatherCode = response.current.condition.code;
+        console.log("code " +weatherCode)
         var weatherImg = "https:"+response.current.condition.icon;
         var temp = response.current.temp_f;
         var tempC = response.current.temp_c;
@@ -50,20 +52,34 @@ function weatherFunc() {
         weatherDiv.append(panelHeading);
         weatherDiv.append(panelBody);
 
-        // weatherDiv.html(
-
-        //     "<div class=\"panel panel-default weather-display\"><div class=\"panel-heading panel-title weather-title\">" +
-        //     city + " Weather</div>" +
-        //     "<div class=\"panel-body\">" +
-        //     "<img src=\"https:" + weatherImg + "\">" + "<br>" +
-        //     "Current Weather: " + weather + "<br>" +
-        //     "<span class=\"temperature\" data-category=\"Current Temperature: \" data-f=\"" + temp + "\" data-c=\"" + tempC + "\" data-state=\"fahrenheit\">Current Temperature: " + temp + "°F</span>" + "<br>" +
-        //     "<span class=\"temperature\" data-category=\"Feels Like: \" data-f=\"" + feelsLike + "\" data-c=\"" + feelsLikeC + "\" data-state=\"fahrenheit\">Feels Like: " + feelsLike + "°F</span>" + "<br>" +
-        //     "Humidity: " + humidity)
-
-
         $("#weather").html(weatherDiv);
-        // alert('hi');
+
+        if (weatherCode === 1000){
+            //it's sunny
+        } else if (weatherCode >1000 && weatherCode <= 1009){
+            //it's cloudy
+        } else if (weatherCode > 1009 && weatherCode <= 1063){
+            //it's misty
+        } else if (weatherCode > 1063 && weatherCode <= 1069){
+            //it's patch snow/sleet
+        } else if (weatherCode > 1069 && weatherCode <= 1087){
+            //it's freezing mist/thunder outbreaks
+        } else if (weatherCode > 1087 && weatherCode <= 1117){
+            //it's snowing
+        } else if (weatherCode > 1117 && weatherCode <= 1147){
+            //it's foggy
+        } else if (weatherCode > 1147 && weatherCode <= 1201){
+            //it's raining
+        } else if (weatherCode > 1201 && weatherCode <= 1237){
+            //it's sleet/snowing
+        } else if (weatherCode > 1237 && weatherCode <= 1246){
+            //it's raining
+        } else if (weatherCode > 1246 && weatherCode <= 1264){
+            //it's snowing
+        } else if (weatherCode > 1264 && weatherCode <= 1282){
+            //it's thundering
+        };
+
 
     });
 }; //end weatherFunc
@@ -72,7 +88,6 @@ weatherFunc();
 
 $("#weather").on("click", "span", function() {
     var state = $(this).attr("data-state");
-    console.log(state);
 
     if (state === "F") {
         $(this).html("Current Temperature: "+ $(this).attr("data-tempc") + "°C<br>" +"Feels Like: " +$(this).attr("data-feelsLikeC")+"°C<br>");
