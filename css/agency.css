@@ -242,8 +242,8 @@ header .intro-text .intro-heading {
 
 @media (min-width: 768px) {
     header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
+      padding-top: 534px;
+      padding-bottom: 200px;
     }
     header .intro-text .intro-lead-in {
         font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -845,5 +845,10 @@ body {
 }
 
 .pac-item:hover {
-    background-color: #9092CD; //#E0E2E0;
+    background-color: #E2BEBE; //#E0E2E0;
+}
+
+#mapArea{
+  background-image: url('../img/map-bg.jpg');
+
 }

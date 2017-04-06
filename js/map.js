@@ -1,4 +1,4 @@
-function initAutocomplete2() {
+function updateMap() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {
@@ -6,7 +6,7 @@ function initAutocomplete2() {
             lng: 151.2195
         },
         zoom: 5,
-        mapTypeId: google.maps.MapTypeId.HYBRID // 'roadmap'
+        mapTypeId: google.maps.MapTypeId.roadmap // 'roadmap'
     });
 
     var address = $("#autocomplete").val();
@@ -27,6 +27,7 @@ function initAutocomplete2() {
 
     // Create the search box and link it to the UI element.
     if (true) {
+        $("#pac-input").show();
         $("#pac-input").text(address);
         var input = document.getElementById('pac-input');
 
@@ -133,7 +134,7 @@ function initAutocomplete() {
 
     // When the user selects an address from the dropdown, populate the address
     // fields in the form.
-    autocomplete.addListener('place_changed', initAutocomplete2);
+    autocomplete.addListener('place_changed', updateMap);
 }
 //
 // function codeAddress() {
