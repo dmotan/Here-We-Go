@@ -1,4 +1,4 @@
-var countryName = "Egypt";
+var countryName = "Italy";
 
 $(".about-link").on("click", function() {
     //countryName = $("#destination").val().trim();
@@ -48,28 +48,9 @@ $(".about-link").on("click", function() {
         method: "GET"
     }).done(function(response) {
         console.log(response);
-
-        
+        $("#news-img-1").attr("src", response.articles[0].urlToImage);
+        $("#news-title").html(response.articles[0].title);
+        $("#news-link").attr("href", response.articles[0].url)
 
     });
-});
-$(document).ready(function(){
-  $('.news-header').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.news-div-slider'
-  });
-  
-  $('.news-div-slider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.news-header',
-    dots: true,
-    centerMode: true,
-    focusOnSelect: true
-  });
-
-
 });
