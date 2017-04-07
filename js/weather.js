@@ -2,11 +2,9 @@ var city = "jersey city";
 // alert('test');
 
 function weatherFunc() {
-    console.log('city ' + city)
 
     var APIKEY = "bdb324a30b314e7592c232435173003";
     var queryURL = "https://api.apixu.com/v1/current.json?key=" + APIKEY + "&q=" + city;
-    console.log('queryURL ' + queryURL);
 
     //ajax request
     $.ajax({
@@ -16,7 +14,6 @@ function weatherFunc() {
 
         var weather = response.current.condition.text;
         var weatherCode = response.current.condition.code;
-        console.log("code " +weatherCode)
         var weatherImg = "https:"+response.current.condition.icon;
         var temp = response.current.temp_f;
         var tempC = response.current.temp_c;
@@ -25,7 +22,6 @@ function weatherFunc() {
         var feelsLikeC = response.current.feelslike_c;
         city = response.location.name;
 
-        console.log(response);
         console.log('json url ' + queryURL);
 
         var weatherDiv = $("<div>");
@@ -53,6 +49,7 @@ function weatherFunc() {
 
         $("#weather-content").html(weatherDiv);
 
+        //conditional backgrounds depending on weather code from api call
         if (weatherCode <= 1000){
             //it's sunny
             $("#weather").css("background-image", "url('img/weather/sunny.jpg')");
@@ -110,6 +107,80 @@ $("#weather").on("click", "span", function() {
         $(this).attr("data-state", "F");
     }
 });
+
+//------------------------------------
+    function getImagesFunc() {
+
+        destination = "tokyo";
+
+        var client_id = '3c0d3707ab11b70'; // oauth api key
+        var imageLinkArr = []; //where we will throw the direct image links we parse from json
+
+        function ajaxFunc(queryterm) {
+            var queryURL = "https://api.imgur.com/3/gallery/search/top?q="+queryterm+"+" + destination;
+            //ajax request
+            $.ajax({
+                url: queryURL,
+                headers: {
+                    'Authorization': 'Client-ID ' + client_id
+                },
+                method: "GET"
+
+            }).done(function(response) {
+
+                //loop until it goes through full json or until our array has 10 img links. shorter of the 2
+                for (var i = 0; i < response.data.length && imageLinkArr.length < 10; i++) {
+                    var imgLink = response.data[i].link
+                        //ignore albums, gifs, etc
+                    if (imgLink.includes(".jpg") || imgLink.includes(".png")) {
+                        //insert 'm' before file extension to get a 320x320 thumbnail from imgur
+                        //push to imageLinkArr
+                        imageLinkArr.push(response.data[i].link.slice(0, -4) + "m" + response.data[i].link.slice(response.data[i].link.length - 4));
+                    }
+                }
+
+                console.log(imageLinkArr);
+                console.log(response);
+                console.log('json url ' + queryURL);
+
+                console.log("imgArr 2 " + imageLinkArr)
+                //empty .imgur-carousel div
+                $(".imgur-carousel").empty();
+
+                //make a div, put image elements for each value in imageLinkArr as src
+                // var galleryDiv = $("<div>");
+                for (var i = 0; i < imageLinkArr.length; i++) {
+                    var imageDiv= $("<div>");
+                    imageDiv.addClass("item")
+                    if (i=0){
+                        imageDiv.addClass("active")
+                    }
+                    var image = $("<img>");
+                    image.addClass("d-block img-fluid")
+                    image.attr({"src": imageLinkArr[i], "height": "320px", "width":"320px"});
+                    imageDiv.html(image);
+                    $(".imgur-carousel").append(imageDiv);
+                }
+
+
+            }); //end ajax
+        };//end of ajaxFunc
+
+        ajaxFunc("travel");
+
+        if (imageLinkArr.length <10) {
+            ajaxFunc("food");
+        }
+
+        if (imageLinkArr.length <10) {
+            ajaxFunc("");
+        }
+
+        imageLinkArr = [];
+
+    }; //end getImagesFunc
+
+    // getImagesFunc();
 
 //-------------------------------------
 
