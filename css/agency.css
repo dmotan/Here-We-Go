@@ -804,6 +804,10 @@ body {
     position: relative;
 }
 
+.weather-padding{
+  padding: 120px;
+}
+
 .weather-title {
     color: #777777;
 }
@@ -823,12 +827,20 @@ body {
  
     /* Position the tooltip text - see examples below! */
     position: absolute;
-    right: 5%;
+    top: 225px;
     z-index: 1;
 }
 
 .weather-display:hover .weather-tooltiptext {
     visibility: visible;
+}
+
+.carousel-inner img {
+  width: auto;
+  height: 500px;
+  max-height: 400px;
+  display: block;
+  margin:auto;
 }
 
 .intro-text .form-control {
