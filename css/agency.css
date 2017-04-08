@@ -838,7 +838,7 @@ body {
 .carousel-inner img {
   width: auto;
   height: 500px;
-  max-height: 500px;
+  max-height: 400px;
   display: block;
   margin:auto;
 }
@@ -918,10 +918,7 @@ body {
   margin-bottom: 20px;
 
 }
-.slider-side{
-  background-color: #ffcc00;
-  width: 89px;
-}
+
 .info-row{
   /*width: */
   /*margin-top: 30px;*/
@@ -947,6 +944,7 @@ body {
 }*/
 #gallery{
   background-color: #f7f7f7;
+  padding-top: 70px;
 }
 .info-p{
   font-family: Montserrat;
@@ -955,4 +953,6 @@ body {
     display: block;
     background-color: #f7f7f7;
 }
-
+#team{
+  padding-top: 70px;
+}
