@@ -2,34 +2,40 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+
     <title>Here We Go</title>
+
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
     <!-- Theme CSS -->
+
     <link href="css/agency.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
+
 </head>
 
 <body id="page-top" class="index">
+
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
@@ -40,6 +46,7 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">Here We Go</a>
             </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -56,7 +63,7 @@
                         <a class="page-scroll about-link" href="#about">General</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#news">News</a>
+                        <a class="page-scroll" href="#team">News</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Weather</a>
@@ -64,45 +71,50 @@
                     <li>
                         <a class="page-scroll" href="#test">Test</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#team">About Us</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
+
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="intro-text destination-div" style="padding-top: 350px; padding-bottom: 300px;">
-                <!-- <div class="intro-lead-in">Here We Go!</div> -->
+            <div class="intro-text whiteBackground">
+                <!-- <div class="intro-lead-in">Welcome!</div> -->
                 <!-- <div class="intro-heading">It's Nice To Meet You</div> -->
                 <div class="row">
-                     <form>
-                        <div class="form-group">
-                            <div class="col-lg-6 col-lg-offset-3">
-                                <!-- <label for="destination"></label> -->
-                                <input  type="text" class="controls form-control" id="autocomplete" placeholder="New York">
+                    <div class="col-lg-6 col-lg-offset-3">
+                        <form>
+
+                            <div class="form-group">
+
+                                <label for="destination"></label>
+                                <input type="text" class="controls form-control" id="autocomplete"  placeholder="Where do you want to go?">
+                                <p class="help-block">Enter your destination..</p>
 
                             </div>
-                        </div>
-                    </form>
+                        </form>
+
+                    </div>
                 </div>
 
-                <a href="#mapArea" class="page-scroll btn btn-xl" style="margin-top: 20px;">Here We Go</a>
-             </div>
+                <a href="#mapArea" class="page-scroll btn btn-xl">Jet Set Go</a>
+            </div>
         </div>
     </header>
+
     <!-- map Section -->
     <section id="mapArea">
         <div class="container mapSection">
             <input type="text" class="controls" id="pac-input" placeholder="Search for more places">
+
             <div class="row" id="map" style="width:100%;height:500px;"></div>
+
         </div>
     </section>
-    </header>
+
     <!-- Portfolio Grid Section -->
     <section id="portfolio" class="bg-light-gray">
         <div class="container">
@@ -200,98 +212,42 @@
             </div>
         </div>
     </section>
+
     <!-- About Section -->
     <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About</h2>
+                    <h3 class="section-subheading text-muted country-name"></h3>
                 </div>
             </div>
-            <div class="row slider-row">
-                <div class="col-lg-12 text-center">
-                    <!-- <h2 class="section-heading">About</h2> -->
-                    <div id="myCarousel" class="carousel slide slider" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                            <li data-target="#myCarousel" data-slide-to="3"></li>
-                        </ol>
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner slider" role="listbox">
-                            <div class="item active">
-                                <img id="news-img-1" src="img/venice-bg.jpg" alt="Chania">
-                                <div class="carousel-caption">
-                                    <h3 id="news-title">Flowers</h3>
-                                    <a id="news-link" href="">Learn More</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img id="news-img-2" src="img/weatherbg.jpg" alt="Chania">
-                            </div>
-                            <div class="item">
-                                <img id="news-img-3" src="img/header-bg.jpg" alt="Flower">
-                            </div>
-                            <div class="item">
-                                <img id="news-img-4" src="img_flower2.jpg" alt="Flower">
-                            </div>
-                        </div>
-                        <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row info-row">
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">General Info</h3>
-                        </div>
-                        <div class="panel-body">
-                            <h3 class="country-name"></h3>
-                            <p class="country-region"></p>
-                            <p class="country-capital"></p>
-                            <p class="country-language"></p>
-                            <p class="country-currency"></p>
-                            <p class="country-population"></p>
-                            <p class="country-timezone"></p>
-                        </div>
-                    </div>
-                    <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
-                    <!-- </div> -->
-                    <!-- </div> -->
-                </div>
-                <div class="col-ld-6">
-                    <img id="country-flag" class="flag-img" alt="flag">
-                </div>
-                <!-- <div class="col-lg-4">
+            <div class="row">
+                <div class="col-lg-4">
                     <div class="img-div">
                         <img class="flag-img" id="country-flag">
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="info-div">
-                        <h3 class="country-name"></h3>
-                        <p class="country-region"></p>
-                        <p class="country-capital"></p>
+                        <h3 class="country-name">Italy</h3>
+
+                        <p class="country-capital">Rome</p>
+
                         <p class="country-language"></p>
+
                         <p class="country-currency"></p>
+
                         <p class="country-population"></p>
+
                         <p class="country-timezone"></p>
+
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </section>
+
     <!-- Team Section -->
     <section id="team" class="bg-light-gray">
         <div class="container">
@@ -355,6 +311,7 @@
             </div>
         </div>
     </section>
+
     <!-- Clients Aside -->
     <aside class="clients">
         <div class="container">
@@ -382,21 +339,15 @@
             </div>
         </div>
     </aside>
-<<<<<<< HEAD
 
     <!-- Contact Section -->
     <section id="contact">
-=======
-    <!-- Weather Section -->
-    <section id="weather">
->>>>>>> 1c5650d5d2041cbfdb9659e3e1265536cbb7e2b6
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Weather</h2>
                     <h3 class="section-subheading weather-description"><p>Know before you go. The latest weather information for your travel destination.</p>
                     <p>Click to switch between Fahrenheit and Celsius.</p></h3>
-<<<<<<< HEAD
 
 
                 </div>
@@ -404,16 +355,11 @@
             <div class="row">
                 <div class="col-lg-12" id="weather">
 
-=======
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12" id="weather-content">
->>>>>>> 1c5650d5d2041cbfdb9659e3e1265536cbb7e2b6
                 </div>
             </div>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <div class="row">
@@ -441,8 +387,10 @@
             </div>
         </div>
     </footer>
+
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
+
     <!-- Portfolio Modal 1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -461,9 +409,11 @@
                                 <h2>Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate,
+                                    maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                 <p>
-                                    <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
+                                    <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can
+                                    purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
                                 <ul class="list-inline">
                                     <li>Date: July 2014</li>
                                     <li>Client: Round Icons</li>
@@ -477,6 +427,7 @@
             </div>
         </div>
     </div>
+
     <!-- Portfolio Modal 2 -->
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -494,7 +445,8 @@
                                 <h2>Project Heading</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
-                                <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
+                                <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily
+                                    be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
                                 <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -504,6 +456,7 @@
             </div>
         </div>
     </div>
+
     <!-- Portfolio Modal 3 -->
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -522,7 +475,8 @@
                                 <h2>Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                                <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
+                                <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or
+                                    other projects.</p>
                                 <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -532,6 +486,7 @@
             </div>
         </div>
     </div>
+
     <!-- Portfolio Modal 4 -->
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -550,7 +505,8 @@
                                 <h2>Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/golden-preview.png" alt="">
-                                <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
+                                <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made
+                                    exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
                                 <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -560,6 +516,7 @@
             </div>
         </div>
     </div>
+
     <!-- Portfolio Modal 5 -->
     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -578,7 +535,8 @@
                                 <h2>Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/escape-preview.png" alt="">
-                                <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
+                                <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking
+                                    for a simple one page solution to describe your business and offer your services.</p>
                                 <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -588,6 +546,7 @@
             </div>
         </div>
     </div>
+
     <!-- Portfolio Modal 6 -->
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -606,7 +565,8 @@
                                 <h2>Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/dreams-preview.png" alt="">
-                                <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
+                                <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed
+                                    with the Bootstrap framework in mind.</p>
                                 <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -616,92 +576,63 @@
             </div>
         </div>
     </div>
-    <section id="test" class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img class="d-block img-fluid" height="500px" width="75%" src="img/slides/s1.jpeg" alt="First slide">
-                </div>
-                <div class="item">
-                    <img class="d-block img-fluid" height="500px" width="75%" src="img/slides/s1.jpeg" alt="Second slide">
-                </div>
-                <div class="item">
-                    <img class="d-block img-fluid" height="500px" width="75%" src="img/slides/s1.jpeg" alt="Third slide">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+
+
+    <section id="test" class = "container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img class="d-block img-fluid" height="500px" width = "75%" src="img/slides/s1.jpeg" alt="First slide">
+          </div>
+          <div class="item">
+            <img class="d-block img-fluid" height="500px" width = "75%" src="img/slides/s1.jpeg" alt="Second slide">
+          </div>
+          <div class="item">
+            <img class="d-block img-fluid" height="500px" width = "75%" src="img/slides/s1.jpeg" alt="Third slide">
+          </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
     </section>
-    <!-- News Section -->
-    <section id="news">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 news-col">
-                    <div class="news-header">
-                    </div>
-                    <div class="news-div-slider">
-                        <div class="slider-img-div">
-                            <img class="slider-img" src="img/weatherbg.jpg"></div>
-                        <div class="slider-img-div">
-                            <img class="slider-img" src="img/header-bg.jpg"></div>
-                        <div class="slider-img-div">
-                            <img class="slider-img" src="img/weatherbg.jpg"></div>
-                        <div class="slider-img-div">
-                            <img class="slider-img" src="img/header-bg.jpg"></div>
-                        <!--  <div>
-                            <img class="slider-img" src=""></div>
-                        <div>
-                            <img class="slider-img" src=""></div>
-                        <div>
-                            <img class="slider-img" src=""></div>
-                        <div>
-                            <img class="slider-img" src=""></div> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
+
     <!-- weather.js -->
     <script type="text/javascript" src="js/weather.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
-<<<<<<< HEAD
 
-=======
-    <!-- <script src="js/contact_me.js"></script> -->
->>>>>>> 1c5650d5d2041cbfdb9659e3e1265536cbb7e2b6
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
-    <!-- slider plugin -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <!-- diaeddin JavaScript -->
     <script src="js/dia.js"></script>
+
     <script type="text/javascript" src="js/map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWzAY3TWuP1MfJvJvkHX4IhpHQhcNIyT8&libraries=places&callback=initAutocomplete" async defer></script>
+
 </body>
 
 </html>
