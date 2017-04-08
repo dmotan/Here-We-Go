@@ -1,4 +1,4 @@
-
+$( document ).ready(function() {
 
     function weatherFunc() {
 
@@ -96,11 +96,11 @@
         var state = $(this).attr("data-state");
 
         if (state === "F") {
-            $(this).html("Current Temperature: " + $(this).attr("data-tempc") + "°C<br>" + "Feels Like: " + $(this).attr("data-feelsLikeC") + "°C<br>");
+            $(this).html("Current Temperature: "+ $(this).attr("data-tempc") + "°C<br>" +"Feels Like: " +$(this).attr("data-feelsLikeC")+"°C<br>");
             $(this).prepend("<span class=\"weather-tooltiptext\">Click to switch between Fahrenheit and Celsius.</span>");
             $(this).attr("data-state", "C");
         } else {
-            $(this).html("Current Temperature: " + $(this).attr("data-tempf") + "°F<br>" + "Feels Like: " + $(this).attr("data-feelsLikef") + "°F<br>");
+            $(this).html("Current Temperature: "+ $(this).attr("data-tempf") + "°F<br>" +"Feels Like: " +$(this).attr("data-feelsLikef")+"°F<br>");
             $(this).prepend("<span class=\"weather-tooltiptext\">Click to switch between Fahrenheit and Celsius.</span>");
             $(this).attr("data-state", "F");
         }
@@ -161,8 +161,22 @@
                 //     imageDiv.html(image);
                 //     $(".imgur-carousel").append(imageDiv);
 
-                    $(".carousel-inner").empty();
-                    $(".carousel-indicators").empty();
+                    // $(".carousel-inner").empty();
+                    // $(".carousel-indicators").empty();
+                    $(".img-carousel-holder").empty();
+
+                    var myCarousel = $("<div>");
+                    myCarousel.attr({"id":"myCarousel", "class": "carousel slide slider", "data-ride":"carousel"})
+                    var indicators = $("<ol>");
+                    indicators.addClass("carousel-indicators");
+                    var inner = $("<div>");
+                    inner.addClass("carousel-inner slider")
+                    inner.attr("role","listbox")
+
+                    myCarousel.append(indicators);
+                    myCarousel.append(inner);
+                    $(".img-carousel-holder").append(myCarousel)
+                    $(".img-carousel-holder").append('<!-- Left and right controls --><a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a>')
 
 
                     for (var i = 0; i < imageLinkArr.length; i++) {
@@ -200,4 +214,4 @@
     //     getImagesFunc();
     // });
 
-
+});

@@ -827,7 +827,7 @@ body {
  
     /* Position the tooltip text - see examples below! */
     position: absolute;
-    right: 5%;
+    top: 225px;
     z-index: 1;
 }
 
