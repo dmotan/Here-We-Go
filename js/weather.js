@@ -87,13 +87,12 @@ function weatherFunc() {
             //it's thundering
             $("#weather").css("background-image", "url('img/weather/thunder.jpg')");
         };
-
-
     });
 }; //end weatherFunc
 
 weatherFunc();
 
+//change Fahrenheit to Celcius
 $("#weather").on("click", "span", function() {
     var state = $(this).attr("data-state");
 
@@ -108,190 +107,92 @@ $("#weather").on("click", "span", function() {
     }
 });
 
-//------------------------------------
-    function getImagesFunc() {
+//------------------------------------ imgur function
 
-        destination = "tokyo";
 
-        var client_id = '3c0d3707ab11b70'; // oauth api key
-        var imageLinkArr = []; //where we will throw the direct image links we parse from json
+function getImagesFunc() {
 
-        function ajaxFunc(queryterm) {
-            var queryURL = "https://api.imgur.com/3/gallery/search/top?q="+queryterm+"+" + destination;
-            //ajax request
-            $.ajax({
-                url: queryURL,
-                headers: {
-                    'Authorization': 'Client-ID ' + client_id
-                },
-                method: "GET"
+    destination = "tokyo";
 
-            }).done(function(response) {
+    var client_id = '3c0d3707ab11b70'; // oauth api key
+    var imageLinkArr = []; //where we will throw the direct image links we parse from json
 
-                //loop until it goes through full json or until our array has 10 img links. shorter of the 2
-                for (var i = 0; i < response.data.length && imageLinkArr.length < 10; i++) {
-                    var imgLink = response.data[i].link
-                        //ignore albums, gifs, etc
-                    if (imgLink.includes(".jpg") || imgLink.includes(".png")) {
-                        //insert 'm' before file extension to get a 320x320 thumbnail from imgur
-                        //push to imageLinkArr
-                        imageLinkArr.push(response.data[i].link.slice(0, -4) + "m" + response.data[i].link.slice(response.data[i].link.length - 4));
-                    }
+    function ajaxFunc(queryterm) {
+        var queryURL = "https://api.imgur.com/3/gallery/search/top?q="+queryterm+"+" + destination;
+        //ajax request
+        $.ajax({
+            url: queryURL,
+            headers: {
+                'Authorization': 'Client-ID ' + client_id
+            },
+            method: "GET"
+
+        }).done(function(response) {
+
+            //loop until it goes through full json or until our array has 10 img links. shorter of the 2
+            for (var i = 0; i < response.data.length && imageLinkArr.length < 10; i++) {
+                var imgLink = response.data[i].link
+                    //ignore albums, gifs, etc
+                if (imgLink.includes(".jpg") || imgLink.includes(".png") && (height >= 320)) {
+                    //insert 'm' before file extension to get a 320x320 thumbnail from imgur
+                    //push to imageLinkArr
+                    imageLinkArr.push(response.data[i].link.slice(0, -4) + "m" + response.data[i].link.slice(response.data[i].link.length - 4));
                 }
+            }
 
-                console.log(imageLinkArr);
-                console.log(response);
-                console.log('json url ' + queryURL);
+            console.log(imageLinkArr);
+            console.log(response);
+            console.log('json url ' + queryURL);
 
-                console.log("imgArr 2 " + imageLinkArr)
-                //empty .imgur-carousel div
-                $(".imgur-carousel").empty();
+            console.log("imgArr 2 " + imageLinkArr)
+            //empty .imgur-carousel div
+            $(".imgur-carousel").empty();
 
-                //make a div, put image elements for each value in imageLinkArr as src
-                // var galleryDiv = $("<div>");
-                for (var i = 0; i < imageLinkArr.length; i++) {
-                    var imageDiv= $("<div>");
-                    imageDiv.addClass("item")
-                    if (i=0){
-                        imageDiv.addClass("active")
-                    }
-                    var image = $("<img>");
-                    image.addClass("d-block img-fluid")
-                    image.attr({"src": imageLinkArr[i], "height": "320px", "width":"320px"});
-                    imageDiv.html(image);
-                    $(".imgur-carousel").append(imageDiv);
+            //make a div, put image elements for each value in imageLinkArr as src
+            // var galleryDiv = $("<div>");
+            for (var i = 0; i < imageLinkArr.length; i++) {
+                var imageDiv= $("<div>");
+                imageDiv.addClass("item")
+                if (i=0){
+                    imageDiv.addClass("active")
                 }
+                var image = $("<img>");
+                image.addClass("d-block img-fluid")
+                image.attr({"src": imageLinkArr[i], "height": "320px", "width":"320px"});
+                imageDiv.html(image);
+                $(".imgur-carousel").append(imageDiv);
+
+                        $(".carousel-inner").empty();
+    $(".carousel-indicators").empty();
 
 
-            }); //end ajax
-        };//end of ajaxFunc
+    for (var i = 0; i < imageLinkArr.length; i++) {
+        $('<div class="item"><img src="' + imageLinkArr[i] + '" class="carousel-image"><div class="carousel-caption"></div>   </div>').appendTo('.carousel-inner');
+        $('<li data-target="#carousel-example-generic" data-slide-to="' + i + '"></li>').appendTo('.carousel-indicators')
 
-        ajaxFunc("travel");
+    }
+    $('.item').first().addClass('active');
+    $('.carousel-indicators > li').first().addClass('active');
+    $('#carousel-example-generic').carousel();
 
-        if (imageLinkArr.length <10) {
-            ajaxFunc("food");
-        }
-
-        if (imageLinkArr.length <10) {
-            ajaxFunc("");
-        }
-
-        imageLinkArr = [];
-
-    }; //end getImagesFunc
-
-    // getImagesFunc();
-
-//-------------------------------------
-
-// $(".destination-btn").on("click", function() {
+            }
 
 
-//     city = $("#autocomplete").val();
-//     console.log('city '+city)
+        }); //end ajax
+    };//end of ajaxFunc
 
-//     var APIKEY = "bdb324a30b314e7592c232435173003";
-//     var queryURL = "https://api.apixu.com/v1/current.json?key=" + APIKEY + "&q=" + city;
-//     console.log('queryURL ' + queryURL);
+    ajaxFunc("travel");
 
-//     //ajax request
-//     $.ajax({
-//         url: queryURL,
-//         method: "GET"
-//     }).done(function(response) {
+    if (imageLinkArr.length <10) {
+        ajaxFunc("food");
+    }
 
-//         var weather = response.current.condition.text;
-//         var weatherImg = response.current.condition.icon;
-//         var temp = response.current.temp_f;
-//         var tempC = response.current.temp_c;
-//         var humidity = response.current.humidity;
-//         var feelsLike = response.current.feelslike_f;
-//         var feelsLikeC = response.current.feelslike_c;
-//         city = response.location.name;
+    if (imageLinkArr.length <10) {
+        ajaxFunc("");
+    }
 
-//         console.log(response);
-//         console.log('json url ' + queryURL);
+    imageLinkArr = []; 
 
-//         var weatherDiv = $("<div>");
-//         weatherDiv.addClass("panel panel-default weather-display");
+}; //end getImagesFunc
 
-
-//         weatherDiv.addClass("weather-display")
-
-
-
-
-//         weatherDiv.html(
-
-//             "<div class=\"panel panel-default weather-display\"><div class=\"panel-heading panel-title weather-title\">" +
-//             city + " Weather</div>" +
-//             "<div class=\"panel-body\">" +
-//             "<img src=\"https:" + weatherImg + "\">" + "<br>" +
-//             "Current Weather: " + weather + "<br>" +
-//             "<span class=\"temperature\" data-category=\"Current Temperature: \" data-f=\"" + temp + "\" data-c=\"" + tempC + "\" data-state=\"fahrenheit\">Current Temperature: " + temp + "°F</span>" + "<br>" +
-//             "<span class=\"temperature\" data-category=\"Feels Like: \" data-f=\"" + feelsLike + "\" data-c=\"" + feelsLikeC + "\" data-state=\"fahrenheit\">Feels Like: " + feelsLike + "°F</span>" + "<br>" +
-//             "Humidity: " + humidity)
-
-//         // $("#weather").append("bye");
-//         $("#weather").html(weatherDiv);
-
-
-//     });
-//         // alert('hi');
-
-
-
-// });
-
-
-
-
-//---------------------------------------------------
-
-// $("#destination-submit").on("click", function(event) {
-//     event.preventDefault();
-//     //get city from input field
-//     city = $("#destination-input").val().trim();
-//     console.log(city)
-//     console.log('destination input ' + $("#destination-input").val().trim())
-//     $("#places").append("<script> (function() {var cx = '010441184624122803236:ok5olagjb20'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })(); </script>" + "<gcse:search webSearchQueryAddition=\""+city+"\"></gcse:search>")
-//     // $("#places").append();
-
-//     var APIKEY = "bdb324a30b314e7592c232435173003";
-//     var queryURL = "https://api.apixu.com/v1/current.json?key=" + APIKEY+
-//         "&q=" + city;
-//     console.log('queryURL ' +queryURL);
-
-//     //ajax request
-//     $.ajax({
-//         url: queryURL,
-//         method: "GET"
-//     }).done(function(response) {
-
-//         var weather = response.current.condition.text
-//         var weatherImg = response.current.condition.icon
-//         var temp = response.current.temp_f
-//         var humidity = response.current.humidity
-//         var feelsLike = response.current.feelslike_f
-//         city = response.location.name
-
-//         console.log(response)
-//         console.log('json url ' + queryURL)
-
-
-
-// $("#weather").html(
-//     "<div class=\"panel panel-default\"><div class=\"panel-heading panel-title\">"+
-//     city+" Weather</div>" +
-//     "<div class=\"panel-body\">" + 
-//     "<img src=\"https:"+weatherImg+"\">"+ "<br>"+
-//     "Current Weather: " + weather + "<br>" +
-//     "Current Temperature: " + temp + "°F / " +
-//     "Feels Like: " + feelsLike + "°F<br>" +
-//     "Humidity: " + humidity + "</div></div>");
-
-//         //maps
-
-//         var mapsKey = "AIzaSyBkYPa5VxJ6FXEVeg9o24-a5fGBUu0Ma9A";
-//     });
-// });
+    getImagesFunc();

@@ -831,6 +831,18 @@ body {
     visibility: visible;
 }
 
+#slide-wrapper.item img {
+  display: block;
+  margin:auto;
+  height: 320px;
+}
+
+.carousel-image {
+  display: block;
+  margin:auto;
+  height: 320px;
+}
+
 .intro-text .form-control {
     width: 75%;
     display: inline-block;
@@ -911,7 +923,7 @@ body {
 }
 .slider{
   width: 80%;
-  height: 400px;
+  height: auto;
   text-align: center;
   margin: auto;
 }
