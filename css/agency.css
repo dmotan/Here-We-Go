@@ -805,7 +805,7 @@ body {
 }
 
 .weather-padding{
-  padding: 75px;
+  padding: 120px;
 }
 
 .weather-title {
@@ -838,7 +838,7 @@ body {
 .carousel-inner img {
   width: auto;
   height: 500px;
-  max-height: 500px;
+  max-height: 400px;
   display: block;
   margin:auto;
 }

@@ -131,7 +131,7 @@
                 for (var i = 0; i < response.data.length && imageLinkArr.length < 10; i++) {
                     var imgLink = response.data[i].link
                         //ignore albums, gifs, etc
-                    if (imgLink.includes(".jpg") || imgLink.includes(".png") && (response.data[i].height >= 320)) {
+                    if (imgLink.includes(".jpg") || imgLink.includes(".png") && (response.data[i].height >= 500)) {
                         //insert 'm' before file extension to get a 320x320 thumbnail from imgur
                         //push to imageLinkArr
                         imageLinkArr.push(response.data[i].link);
