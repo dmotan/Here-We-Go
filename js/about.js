@@ -1,6 +1,6 @@
 var countryName = "united states of america";
 
-$(".about-link").on("click", function() {
+$("#info").on("click", function() {
     //countryName = $("#destination").val().trim();
     var queryURL4 = " https://restcountries.eu/rest/v2/name/" + countryName;
     console.log(countryName);
