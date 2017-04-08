@@ -837,7 +837,7 @@ body {
 
 .carousel-inner img {
   width: auto;
-  height: 500px;
+  height: 400px;
   max-height: 400px;
   display: block;
   margin:auto;
@@ -906,7 +906,7 @@ body {
 
 .slider{
   width: 100%;
-  height: 500px;
+  height: 400px;
   text-align: center;
   margin: auto;
   /*border: 3px solid #ffcc00;*/
