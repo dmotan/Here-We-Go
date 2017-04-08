@@ -91,6 +91,8 @@ function showSearchMap() {
             }, 1250, 'easeInOutExpo');
 
             destination = place.name;
+            weatherFunc();
+            getImagesFunc();
             console.log("Current Destination:" +destination);
         });
         map.fitBounds(bounds);

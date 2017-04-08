@@ -1,4 +1,3 @@
-$( document ).ready(function() {
 
     function weatherFunc() {
 
@@ -89,7 +88,7 @@ $( document ).ready(function() {
         });
     }; //end weatherFunc
 
-    weatherFunc();
+    // weatherFunc();
 
     //change Fahrenheit to Celcius
     $("#weather").on("click", "span", function() {
@@ -207,11 +206,11 @@ $( document ).ready(function() {
 
     }; //end getImagesFunc
 
-    getImagesFunc();
+    // getImagesFunc();
 
     // $("#mapArea").on("click", function(){
     //     weatherFunc();
     //     getImagesFunc();
     // });
 
-});
+// });
