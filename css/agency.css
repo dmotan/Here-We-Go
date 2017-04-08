@@ -838,7 +838,7 @@ body {
 .carousel-inner img {
   width: auto;
   height: 500px;
-  max-height: 400px;
+  max-height: 500px;
   display: block;
   margin:auto;
 }

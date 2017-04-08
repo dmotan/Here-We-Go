@@ -51,7 +51,7 @@ $(".about-link").on("click", function() {
         method: "GET"
     }).done(function(response) {
         console.log(response);
-        $("#news-img-1").attr("src", response.articles[0].urlToImage);
+        // $("#news-img-1").attr("src", response.articles[0].urlToImage);
         $("#news-title").html(response.articles[0].title);
         $("#news-link").attr("href", response.articles[0].url)
 

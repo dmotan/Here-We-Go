@@ -129,9 +129,12 @@
 
                 //loop until it goes through full json or until our array has 10 img links. shorter of the 2
                 for (var i = 0; i < response.data.length && imageLinkArr.length < 10; i++) {
-                    var imgLink = response.data[i].link
+                    var imgLink = response.data[i].link;
+                    var height = response.data[i].height;
+                    var width = response.data[i].width;
+                    var ratio = width/height;
                         //ignore albums, gifs, etc
-                    if (imgLink.includes(".jpg") || imgLink.includes(".png") && (response.data[i].height >= 500)) {
+                    if ((imgLink.includes(".jpg") || imgLink.includes(".png")) && (height >= 500) && (ratio>1) && (ratio<1.5)) {
                         //insert 'm' before file extension to get a 320x320 thumbnail from imgur
                         //push to imageLinkArr
                         imageLinkArr.push(response.data[i].link);
@@ -162,30 +165,34 @@
 
                     // $(".carousel-inner").empty();
                     // $(".carousel-indicators").empty();
-                    $(".img-carousel-holder").empty();
 
-                    var myCarousel = $("<div>");
-                    myCarousel.attr({"id":"myCarousel", "class": "carousel slide slider", "data-ride":"carousel"})
-                    var indicators = $("<ol>");
-                    indicators.addClass("carousel-indicators");
-                    var inner = $("<div>");
-                    inner.addClass("carousel-inner slider")
-                    inner.attr("role","listbox")
+                    //-----------------------------------
+                    // $(".img-carousel-holder").empty();
 
-                    myCarousel.append(indicators);
-                    myCarousel.append(inner);
-                    $(".img-carousel-holder").append(myCarousel)
-                    $(".img-carousel-holder").append('<!-- Left and right controls --><a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a>')
+                    // var myCarousel = $("<div>");
+                    // myCarousel.attr({"id":"myCarousel", "class": "carousel slide slider", "data-ride":"carousel"})
+                    // var indicators = $("<ol>");
+                    // indicators.addClass("carousel-indicators");
+                    // var inner = $("<div>");
+                    // inner.addClass("carousel-inner slider")
+                    // inner.attr("role","listbox")
+
+                    // myCarousel.append(indicators);
+                    // myCarousel.append(inner);
+                    // $(".img-carousel-holder").append(myCarousel)
+                    // $(".img-carousel-holder").append('<!-- Left and right controls --><a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a>')
 
 
-                    for (var i = 0; i < imageLinkArr.length; i++) {
-                        $('<div class="item"><img src="' + imageLinkArr[i] + '" class="carousel-image"><div class="carousel-caption"></div>   </div>').appendTo('.carousel-inner');
-                        $('<li data-target="#carousel-example-generic" data-slide-to="' + i + '"></li>').appendTo('.carousel-indicators')
-                    }
-                    $('.item').first().addClass('active');
-                    $('.carousel-indicators > li').first().addClass('active');
-                    $('#carousel-example-generic').carousel();
-
+                    // for (var i = 0; i < imageLinkArr.length; i++) {
+                    //     $('<div class="item"><img src="' + imageLinkArr[i] + '" class="carousel-image"><div class="carousel-caption"></div>   </div>').appendTo('.carousel-inner');
+                    //     $('<li data-target="#carousel-example-generic" data-slide-to="' + i + '"></li>').appendTo('.carousel-indicators')
+                    // }
+                    // $('.item').first().addClass('active');
+                    // $('.carousel-indicators > li').first().addClass('active');
+                    // $('#carousel-example-generic').carousel();
+                for (var i = 0; i < imageLinkArr.length; i++) {
+                    $("#img"+i).attr("src", imageLinkArr[i]);
+                }
                 
 
 
