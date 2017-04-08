@@ -1,4 +1,4 @@
-var countryName = "Italy";
+var countryName = "united states of america";
 
 $(".about-link").on("click", function() {
     //countryName = $("#destination").val().trim();
@@ -31,6 +31,7 @@ $(".about-link").on("click", function() {
         //  "Population is " + response[0].population);
 
     });
+    var newsSource="";
     var newsAPI = "65068dcb32b5464285ed0456bec9bdf8";
     var queryURL2 = "https://newsapi.org/v1/sources?country=us&apiKey=" + newsAPI;
     $.ajax({
@@ -38,11 +39,13 @@ $(".about-link").on("click", function() {
         method: "GET"
     }).done(function(response) {
         console.log(response);
-        $("#news-sources").html(response.sources[0].name + "<br>" + "<br>" + response.sources[0].description);
+        newsSource = response.sources[0].id;
+
+        // $("#news-sources").html(response.sources[0].name + "<br>" + "<br>" + response.sources[0].description);
 
     });
     var newsAPI = "65068dcb32b5464285ed0456bec9bdf8";
-    var queryURL3 = "https://newsapi.org/v1/articles?source=bbc-news&apiKey=" + newsAPI;
+    var queryURL3 = "https://newsapi.org/v1/articles?source=" + newsSource + "&apiKey=" + newsAPI;
     $.ajax({
         url: queryURL3,
         method: "GET"

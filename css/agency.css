@@ -911,9 +911,10 @@ body {
 }
 .slider{
   width: 80%;
-  height: 400px;
+  height: 300px;
   text-align: center;
   margin: auto;
+  /*border: 3px solid #ffcc00;*/
 }
 .slider-row{
   margin: auto;
@@ -921,12 +922,21 @@ body {
   margin-bottom: 20px;
 
 }
+.slider-side{
+  background-color: #ffcc00;
+  width: 89px;
+}
 .info-row{
   /*width: */
+  border-radius: 5px;
   padding: 20px;
   text-align: center;
   margin: auto;
-  background-color: #f3f3f3;
+  background-color: #ffcc00;
+}
+.foo{
+  background-color: black;
+  color: white;
 }
 .destination-div{
   padding-top: 350px;
