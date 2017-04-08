@@ -38,7 +38,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Here We Go</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Here We Go<!-- <img style="width: 150px; height: 40px;" src="./img/logos/herewego.png"> --></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -53,10 +53,10 @@
                         <a class="page-scroll" href="#weather">Weather</a>
                     </li>
                     <li>
-                        <a class="page-scroll about-link" href="#gallery">Gallery</a>
+                        <a class="page-scroll" href="#gallery">Gallery</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#info">Information</a>
+                        <a id="info" class="page-scroll" href="#information">Information</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">Team</a>
@@ -123,15 +123,15 @@
     <!-- Gallery Section -->
     <section id="gallery">
         <div class="container">
-<!--             <div class="row">
+            <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Gallery</h2>
                 </div>
-            </div> -->
+            </div>
             <div class="row slider-row">
                 <div class="col-lg-12 text-center img-carousel-holder">
                     <!-- <h2 class="section-heading">About</h2> -->
-                    <div id="myCarousel" class="carousel slide slider" data-ride="carousel">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -146,9 +146,9 @@
                             <li data-target="#myCarousel" data-slide-to="9"></li>
                         </ol>
                         <!-- Wrapper for slides -->
-                        <div class="carousel-inner slider" role="listbox">
+                        <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="img/carousel/image01.jpg" id="img0" alt="">
+
                             </div>
                             <div class="item">
                                 <img src="img/carousel/image02.jpg" id="img1" alt="">
@@ -156,34 +156,13 @@
                             <div class="item">
                                 <img src="img/carousel/image03.jpg" id="img2" alt="">
                             </div>
-                            <div class="item">
-                                <img src="img/carousel/image04.jpg" id="img3" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/carousel/image05.jpg" id="img4" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/carousel/image06.jpg" id="img5" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/carousel/image07.jpg" id="img6" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/carousel/image08.jpg" id="img7" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/carousel/image09.jpg" id="img8" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="img/carousel/image10.jpg" id="img9" alt="">
-                            </div>
                         </div>
                         <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <a class="left carousel-control slider-side" href="#myCarousel" role="button" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <a class="right carousel-control slider-side" href="#myCarousel" role="button" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
@@ -193,7 +172,7 @@
         </div>
     </section>
     <!-- Information Section -->
-    <section id="info">
+    <section id="information">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -203,42 +182,27 @@
             <div class="row info-row">
                 <div class="col-lg-6">
                     <div class="panel panel-default">
-                        <div class="panel-heading">
+                        <div class="panel-heading foo" style="background-color: black;color:white;">
                             <h3 class="panel-title">General Info</h3>
                         </div>
                         <div class="panel-body">
                             <h3 class="country-name"></h3>
-                            <p class="country-region"></p>
-                            <p class="country-capital"></p>
-                            <p class="country-language"></p>
-                            <p class="country-currency"></p>
-                            <p class="country-population"></p>
-                            <p class="country-timezone"></p>
+                            <p class="country-region info-p"></p>
+                            <p class="country-capital info-p"></p>
+                            <p class="country-language info-p"></p>
+                            <p class="country-currency info-p"></p>
+                            <p class="country-population info-p"></p>
+                            <p class="country-timezone info-p"></p>
                         </div>
                     </div>
                     <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
                     <!-- </div> -->
                     <!-- </div> -->
                 </div>
-                <div class="col-ld-6">
+                <div class="col-ld-6 img-div">
                     <img id="country-flag" class="flag-img" alt="flag">
                 </div>
-                <!-- <div class="col-lg-4">
-                    <div class="img-div">
-                        <img class="flag-img" id="country-flag">
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="info-div">
-                        <h3 class="country-name"></h3>
-                        <p class="country-region"></p>
-                        <p class="country-capital"></p>
-                        <p class="country-language"></p>
-                        <p class="country-currency"></p>
-                        <p class="country-population"></p>
-                        <p class="country-timezone"></p>
-                    </div>
-                </div> -->
+                
             </div>
         </div>
     </section>
@@ -305,134 +269,6 @@
             </div>
         </div>
     </section>    
-    <!-- Portfolio Grid Section -->
-   <!--  <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
-                        <p class="text-muted">Graphic Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/golden.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Golden</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/escape.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Escape</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Dreams</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    
-
-    <!-- Clients Aside -->
-<!--     <aside class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-<<<<<<< HEAD
-    </aside> -->
-
 
     <footer>
         <div class="container">
@@ -643,37 +479,7 @@
             </div>
         </div>
     </div>
-<!--     <section id="test" class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img class="d-block img-fluid" height="500px" width="75%" src="img/slides/s1.jpeg" alt="First slide">
-                </div>
-                <div class="item">
-                    <img class="d-block img-fluid" height="500px" width="75%" src="img/slides/s1.jpeg" alt="Second slide">
-                </div>
-                <div class="item">
-                    <img class="d-block img-fluid" height="500px" width="75%" src="img/slides/s1.jpeg" alt="Third slide">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-  </section> -->
-   <!--    News Section
 
-    </section> -->
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <!-- weather.js -->
@@ -691,7 +497,7 @@
     <!-- slider plugin -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <!-- diaeddin JavaScript -->
-    <script src="js/dia.js"></script>
+    <script src="js/about.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWzAY3TWuP1MfJvJvkHX4IhpHQhcNIyT8&libraries=places&callback=initAutocomplete" async defer></script>
 </body>
