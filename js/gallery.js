@@ -45,7 +45,7 @@ function getImagesFunc() {
                 var ratio = width / height;
                 console.log('ratio '+ratio)
                 //ignore albums, gifs, etc
-                if ((imgLink.includes(".jpg") || imgLink.includes(".png")) && (height >= 500) && (ratio > 1)) {
+                if ((imgLink.includes(".jpg") || imgLink.includes(".png")) && (height >= 500) && (ratio > 1) && (ratio <2.5)) {
                     //push to imageLinkArr
                     imageLinkArr.push(imgLink);
                 }
