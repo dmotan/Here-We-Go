@@ -1018,6 +1018,7 @@ body {
   height: 500px;
 }*/
 
+
 #gallery {
     background-color: #f7f7f7;
     padding-top: 70px;
@@ -1027,6 +1028,7 @@ body {
     font-family: Montserrat;
     font-size: 20px;
     /*font-weight: bold;*/
+
     display: block;
     background-color: #f7f7f7;
 }
