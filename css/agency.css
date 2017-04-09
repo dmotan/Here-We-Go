@@ -26,7 +26,11 @@ p.large {
     font-size: 16px;
 }
 
-a, a:hover, a:focus, a:active, a.active {
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
     outline: none;
 }
 
@@ -34,11 +38,19 @@ a {
     color: #fed136;
 }
 
-a:hover, a:focus, a:active, a.active {
+a:hover,
+a:focus,
+a:active,
+a.active {
     color: #fec503;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -65,17 +77,37 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
     color: white;
     background-color: #fec503;
     border-color: #f6bf01;
 }
 
-.btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
     background-image: none;
 }
 
-.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
     background-color: #fed136;
     border-color: #fed136;
 }
@@ -97,17 +129,37 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 40px;
 }
 
-.btn-xl:hover, .btn-xl:focus, .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
     color: white;
     background-color: #fec503;
     border-color: #f6bf01;
 }
 
-.btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
     background-image: none;
 }
 
-.btn-xl.disabled, .btn-xl[disabled], fieldset[disabled] .btn-xl, .btn-xl.disabled:hover, .btn-xl[disabled]:hover, fieldset[disabled] .btn-xl:hover, .btn-xl.disabled:focus, .btn-xl[disabled]:focus, fieldset[disabled] .btn-xl:focus, .btn-xl.disabled:active, .btn-xl[disabled]:active, fieldset[disabled] .btn-xl:active, .btn-xl.disabled.active, .btn-xl[disabled].active, fieldset[disabled] .btn-xl.active {
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
     background-color: #fed136;
     border-color: #fed136;
 }
@@ -127,7 +179,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 
-.navbar-custom .navbar-brand:hover, .navbar-custom .navbar-brand:focus, .navbar-custom .navbar-brand:active, .navbar-custom .navbar-brand.active {
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-brand:active,
+.navbar-custom .navbar-brand.active {
     color: #fec503;
 }
 
@@ -144,7 +199,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 12px;
 }
 
-.navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus {
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
     background-color: #fed136;
 }
 
@@ -156,7 +212,8 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-.navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus {
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus {
     color: #fed136;
     outline: none;
 }
@@ -167,7 +224,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fed136;
 }
 
-.navbar-custom .navbar-nav>.active>a:hover, .navbar-custom .navbar-nav>.active>a:focus {
+.navbar-custom .navbar-nav>.active>a:hover,
+.navbar-custom .navbar-nav>.active>a:focus {
     color: white;
     background-color: #fec503;
 }
@@ -242,8 +300,8 @@ header .intro-text .intro-heading {
 
 @media (min-width: 768px) {
     header .intro-text {
-      padding-top: 534px;
-      padding-bottom: 200px;
+        padding-top: 534px;
+        padding-bottom: 200px;
     }
     header .intro-text .intro-lead-in {
         font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -334,7 +392,8 @@ section h3.section-subheading {
     margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3, #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
     margin: 0;
 }
 
@@ -391,7 +450,8 @@ section h3.section-subheading {
     min-height: 50px;
 }
 
-.timeline>li:before, .timeline>li:after {
+.timeline>li:before,
+.timeline>li:after {
     content: " ";
     display: table;
 }
@@ -475,7 +535,8 @@ section h3.section-subheading {
     text-transform: none;
 }
 
-.timeline .timeline-body>p, .timeline .timeline-body>ul {
+.timeline .timeline-body>p,
+.timeline .timeline-body>ul {
     margin-bottom: 0;
 }
 
@@ -592,7 +653,8 @@ section#weather .form-group {
     margin-bottom: 25px;
 }
 
-section#weather .form-group input, section#weather .form-group textarea {
+section#weather .form-group input,
+section#weather .form-group textarea {
     padding: 20px;
 }
 
@@ -609,14 +671,14 @@ section#weather .ntrol:focus {
     box-shadow: none;
 }
 
-section#weather ::-webkit-input-placeholder {
+section#weather::-webkit-input-placeholder {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     color: #eeeeee;
 }
 
-section#weather :-moz-placeholder {
+section#weather:-moz-placeholder {
     /* Firefox 18- */
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -624,7 +686,7 @@ section#weather :-moz-placeholder {
     color: #eeeeee;
 }
 
-section#weather ::-moz-placeholder {
+section#weather::-moz-placeholder {
     /* Firefox 19+ */
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -632,7 +694,7 @@ section#weather ::-moz-placeholder {
     color: #eeeeee;
 }
 
-section#weather :-ms-input-placeholder {
+section#weather:-ms-input-placeholder {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -682,11 +744,16 @@ ul.social-buttons li a {
     transition: all 0.3s;
 }
 
-ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active {
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
     background-color: #fed136;
 }
 
-.btn:focus, .btn:active, .btn.active, .btn:active:focus {
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus {
     outline: none;
 }
 
@@ -804,8 +871,8 @@ body {
     position: relative;
 }
 
-.weather-padding{
-  padding: 120px;
+.weather-padding {
+    padding: 120px;
 }
 
 .weather-title {
@@ -824,7 +891,6 @@ body {
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
-
     /* Position the tooltip text - see examples below! */
     position: absolute;
     top: 225px;
@@ -836,11 +902,11 @@ body {
 }
 
 .carousel-inner img {
-  width: auto;
-  height: 400px;
-  max-height: 400px;
-  display: block;
-  margin:auto;
+    width: auto;
+    height: 400px;
+    max-height: 400px;
+    display: block;
+    margin: auto;
 }
 
 .intro-text .form-control {
@@ -849,24 +915,24 @@ body {
     border: 2px groove #fed136;
 }
 
-.intro-text ::-webkit-input-placeholder {
+.intro-text::-webkit-input-placeholder {
     font-style: italic;
     font-size: 10px;
 }
 
-.intro-text :-moz-placeholder {
+.intro-text:-moz-placeholder {
     /* Firefox 18- */
     font-style: italic;
     font-size: 10px;
 }
 
-.intro-text ::-moz-placeholder {
+.intro-text::-moz-placeholder {
     /* Firefox 19+ */
     font-style: italic;
     font-size: 10px;
 }
 
-.intro-text :-ms-input-placeholder {
+.intro-text:-ms-input-placeholder {
     font-style: italic;
     font-size: 10px;
 }
@@ -874,86 +940,154 @@ body {
 .pac-container {
     border: 2px groove #fed136;
 }
+
 .pac-item:hover {
     background-color: #E2BEBE;
 }
 
-#mapArea{
-  padding-top: 50px;
-  /*background-image: url('../img/m.jpg');*/
+#mapArea {
+    padding-top: 50px;
+    /*background-image: url('../img/m.jpg');*/
 }
 
-#information{
-  padding-top: 70px;
-}
-.img-div{
-  margin-top: 10px;
-}
-.flag-img{
-  width: 50%;
-  height: 50%;
-}
-.info-div{
-  margin-top: 10px;
-   /*background-color: #ebebeb;*/
-  border-radius: 10px;
-  padding: 10px;
+#information {
+    padding-top: 70px;
 }
 
-.mapSection{
-  width: 90%;
+.img-div {
+    margin-top: 10px;
 }
 
-.slider{
-  width: 100%;
-  height: 400px;
-  text-align: center;
-  margin: auto;
-  /*border: 3px solid #ffcc00;*/
-}
-.slider-row{
-  padding: 20px;
-  margin: auto;
-  margin-top: 0px;
-  margin-bottom: 20px;
-
+.flag-img {
+    width: 50%;
+    height: 50%;
 }
 
-.info-row{
-  /*width: */
-  /*margin-top: 30px;*/
-  border-radius: 5px;
-  padding: 20px;
-  text-align: center;
-  margin: auto;
-  /*background-color: #ffe455;*/
+.info-div {
+    margin-top: 10px;
+    /*background-color: #ebebeb;*/
+    border-radius: 10px;
+    padding: 10px;
 }
-.foo{
-  background-color: black;
-  color: white;
+
+.mapSection {
+    width: 90%;
 }
-.destination-div{
-  padding-top: 350px;
+
+.slider {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    margin: auto;
+    /*border: 3px solid #ffcc00;*/
 }
-#about{
-  padding-top: 50px;
+
+.slider-row {
+    padding: 20px;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
+
+.info-row {
+    /*width: */
+    /*margin-top: 30px;*/
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    /*background-color: #ffe455;*/
+}
+
+.foo {
+    background-color: black;
+    color: white;
+}
+
+.destination-div {
+    padding-top: 350px;
+}
+
+#about {
+    padding-top: 50px;
+}
+
+
 /*#news-img-1{
   width: 700px;
   height: 500px;
 }*/
-#gallery{
-  background-color: #f7f7f7;
-  padding-top: 70px;
+
+
+#gallery {
+    background-color: #f7f7f7;
+    padding-top: 70px;
 }
 
-.info-p{
-  font-family: Montserrat;
-  font-size: 20px;
-  /*font-weight: bold;*/
+.info-p {
+    font-family: Montserrat;
+    font-size: 20px;
+    /*font-weight: bold;*/
+
     display: block;
     background-color: #f7f7f7;
 }
-#team{
-  padding-top: 70px;
+
+#team {
+    padding-top: 70px;
+}
+
+
+/* code for animated blinking cursor */
+
+.typed-cursor {
+    opacity: 1;
+    font-weight: 100;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.typed-fade-out {
+    opacity: 0;
+    animation: 0;
+    transition: opacity .25s;
+}
+
+.type-wrap {
+    font-family: Montserrat;
+    margin: 10px auto 50px auto;
+    font-size: 30px;
+    width: 300px;
+    color: white;
+    padding: 5px;
+    background-color: #FED14F;
+    border-radius: 5px;
+    /*border: #CCC 1px solid;*/
 }
