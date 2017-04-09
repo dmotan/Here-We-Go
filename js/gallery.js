@@ -1,3 +1,22 @@
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 function getImagesFunc() {
 
     var client_id = '3c0d3707ab11b70'; // oauth api key
@@ -24,9 +43,9 @@ function getImagesFunc() {
                 var height = response.data[i].height;
                 var width = response.data[i].width;
                 var ratio = width / height;
-                // console.log('ratio '+ratio)
+                console.log('ratio '+ratio)
                 //ignore albums, gifs, etc
-                if ((imgLink.includes(".jpg") || imgLink.includes(".png")) && (height >= 500)) {
+                if ((imgLink.includes(".jpg") || imgLink.includes(".png")) && (height >= 500) && (ratio > 1)) {
                     //push to imageLinkArr
                     imageLinkArr.push(imgLink);
                 }
@@ -37,12 +56,12 @@ function getImagesFunc() {
             console.log('json url ' + queryURL);
 
             console.log("imgArr 2 " + imageLinkArr)
+
+            shuffle(imageLinkArr);
            
             for (var i = 0; i < imageLinkArr.length; i++) {
                 $("#img" + i).attr("src", imageLinkArr[i]);
             }
-
-
 
         }); //end ajax
     }; //end of ajaxFunc
@@ -54,9 +73,18 @@ function getImagesFunc() {
     }
 
     if (imageLinkArr.length < 10) {
+        ajaxFunc("photography");
+    }
+
+    if (imageLinkArr.length < 10) {
+        ajaxFunc("trip");
+    }
+
+    if (imageLinkArr.length < 10) {
         ajaxFunc("");
     }
 
+    //reset image link array in case user puts in another destination and getImagesFunc refires
     imageLinkArr = [];
 
 }; //end getImagesFunc

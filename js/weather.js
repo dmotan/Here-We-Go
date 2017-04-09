@@ -88,9 +88,7 @@
         });
     }; //end weatherFunc
 
-    // weatherFunc();
-
-    //change Fahrenheit to Celcius
+    //change Fahrenheit to Celcius on click
     $("#weather").on("click", "span", function() {
         var state = $(this).attr("data-state");
 
@@ -104,8 +102,3 @@
             $(this).attr("data-state", "F");
         }
     });
-
-    //------------------------------------ imgur function
-
-
-    
