@@ -926,7 +926,7 @@ body {
   padding: 20px;
   text-align: center;
   margin: auto;
-  background-color: #ffe455;
+  /*background-color: #ffe455;*/
 }
 .foo{
   background-color: black;
