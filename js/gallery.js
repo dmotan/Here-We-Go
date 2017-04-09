@@ -48,6 +48,7 @@ function getImagesFunc() {
 
                 //ignore albums, gifs, etc
                 //using indexOf() instead of includes() for more browser support
+
                 if ((imgLink.indexOf(".jpg") !==-1 || imgLink.indexOf(".png")!==-1) && (height >= 500) && (ratio > 1) && (ratio <2.5) && (nsfw === false)) {
                     //push to imageLinkArr
                     imageLinkArr.push(imgLink);
