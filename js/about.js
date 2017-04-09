@@ -1,6 +1,6 @@
-var newsAPI = "65068dcb32b5464285ed0456bec9bdf8";
-var queryURL3 = "https://newsapi.org/v1/articles?source=" + newsSource + "&apiKey=" + newsAPI;
-// var countryName = "united states of america";
+// var newsAPI = "65068dcb32b5464285ed0456bec9bdf8";
+// var queryURL3 = "https://newsapi.org/v1/articles?source=" + newsSource + "&apiKey=" + newsAPI;
+// // var countryName = "united states of america";
 
 function fillInfo() {
     // $("#info").on("click", function() {
@@ -14,18 +14,6 @@ function fillInfo() {
         method: "GET"
     }).done(function(response) {
         console.log(response);
-
-        //countryName = $("#destination").val().trim();
-        console.log("Information page: Got country ", country);
-        var queryURL4 = " https://restcountries.eu/rest/v2/name/" + country.toLowerCase();
-        console.log("Information page:  ", queryURL4);
-        $.ajax({
-            url: queryURL4,
-            method: "GET"
-        }).done(function(response) {
-            console.log(response);
-
-
 
         if (response.length > 1) {
             $("#country-flag").attr("src", response[1].flag);
