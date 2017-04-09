@@ -32,7 +32,7 @@ function fillInfo() {
             $(".country-region").html("Region : " + response[0].region);
             $(".country-language").html("Language : " + response[0].languages[0].name);
             $(".country-capital").html("Capital : " + response[0].capital);
-            $(".country-currency").html("Currency : " + response[0].currencies[0].name + " , " + response[0].currencies[0].code + " , " + response[0].currencies[0].symbol);
+            $(".country-currency").html("Currency : " + response[0].currencies[0].name + " , " + response[0].currencies[0].code);
             $(".country-population").html("Population : " + response[0].population);
             console.log(response[0].currencies.length);
             if (response[0].timezones.length > 1)
