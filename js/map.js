@@ -92,6 +92,7 @@ function showSearchMap() {
 
             destination = place.name;
             weatherFunc();
+            fillInfo();
             getImagesFunc();
             console.log("Current Destination:" +destination);
         });
