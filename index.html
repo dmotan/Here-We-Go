@@ -28,6 +28,9 @@
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/typed.js" type="text/javascript"></script>
 </head>
 
 <body id="page-top" class="index">
@@ -75,18 +78,36 @@
                 <!-- <div class="intro-lead-in">Here We Go!</div> -->
                 <!-- <div class="intro-heading">It's Nice To Meet You</div> -->
                 <div class="row">
-                    <div ng-app="">
-                        <h1 ng-bind="name" style="color: white;">
-                    </h1>
-                        <form>
-                            <div class="form-group">
-                                <div class="col-lg-6 col-lg-offset-3">
-                                    <!-- <label for="destination"></label> -->
-                                    <input type="text" ng-model="name" class="controls form-control" id="autocomplete" placeholder="Where do you want to go?">
-                                </div>
-                            </div>
-                        </form>
+                    <!-- Banner -->
+                    <!-- load banner.js -->
+                    <script src="js/banner.js"></script>
+                    
+                     <div class="type-wrap">
+                     <span id="typed" style="white-space:pre;"></span>
+                    <div id="typed-strings">
+                        <p>UNITED STATES</p>
+                        <p>PALESTINE</p>
+                        <p>INDIA</p>
+                        <p>PHILIPPINES</p>
+                        <p>ITALY</p>
+                        <p>ENGLAND</p>
+                        <p>JORDAN</p>
+                        <p>FRANCE</p>
+                        <p>THAYLAND</p>
+                        <p>SOUTH AFRICA</p>
+                        <p>DUBAI</p>
+                        <p>TURKEY</p>
                     </div>
+                    </div>
+                    <!-- END Banner -->
+                    <form>
+                        <div class="form-group">
+                            <div class="col-lg-6 col-lg-offset-3">
+                                <!-- <label for="destination"></label> -->
+                                <input type="text" class="controls form-control" id="autocomplete" placeholder="Where do you want to go?">
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <a href="#mapArea" class="page-scroll btn btn-xl" style="margin-top: 20px;">Here We Go</a>
             </div>
