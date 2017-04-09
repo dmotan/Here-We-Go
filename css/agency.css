@@ -824,7 +824,7 @@ body {
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
- 
+
     /* Position the tooltip text - see examples below! */
     position: absolute;
     top: 225px;
@@ -880,7 +880,7 @@ body {
 
 #mapArea{
   padding-top: 50px;
-  /*background-image: url('../img/map-bg.jpg');*/
+  /*background-image: url('../img/m.jpg');*/
 }
 
 .img-div{

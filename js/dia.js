@@ -1,6 +1,6 @@
 var countryName = "Italy";
 
-$(".about-link").on("click", function() {
+$("#info").on("click", function() {
     //countryName = $("#destination").val().trim();
     var queryURL4 = " https://restcountries.eu/rest/v2/name/" + countryName;
     console.log(countryName);
@@ -24,10 +24,10 @@ $(".about-link").on("click", function() {
         else
             $(".country-timezone").html("TimeZone : " + response[0].timezones[0]);
 
-        // $("#current-currency").html(response[0].name + "<br>" + "Currency is " + response[0].currencies[0].name + " " + response[0].currencies[0].symbol + "<br>" + 
-        //  "Capital is " + response[0].capital + "<br>" + 
-        //  "Language is " + response[0].languages[0].name + "<br>" + 
-        //  "TimeZone is " + response[0].timezones[0] + "<br>" + 
+        // $("#current-currency").html(response[0].name + "<br>" + "Currency is " + response[0].currencies[0].name + " " + response[0].currencies[0].symbol + "<br>" +
+        //  "Capital is " + response[0].capital + "<br>" +
+        //  "Language is " + response[0].languages[0].name + "<br>" +
+        //  "TimeZone is " + response[0].timezones[0] + "<br>" +
         //  "Population is " + response[0].population);
 
     });
