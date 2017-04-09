@@ -1,5 +1,5 @@
 var placeSearch, autocomplete,
-    map, searchBox,destination ="Sydney";
+    map, searchBox,destination ="jordan";
 
 
 function updateSearchBox() {
