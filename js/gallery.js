@@ -51,7 +51,7 @@ function getImagesFunc() {
                 // }
 
                 //using indexOf() instead of includes() for more browser support
-                if ((imgLink.includes(".jpg") !==-1 || imgLink.indexOf(".png")!==-1) && (height >= 500) && (ratio > 1) && (ratio <2.5)) {
+                if ((imgLink.indexOf(".jpg") !==-1 || imgLink.indexOf(".png")!==-1) && (height >= 500) && (ratio > 1) && (ratio <2.5)) {
                     //push to imageLinkArr
                     imageLinkArr.push(imgLink);
                 }
