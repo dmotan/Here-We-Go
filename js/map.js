@@ -1,5 +1,10 @@
 var placeSearch, autocomplete,
+
     map, searchBox,destination ="jordan";
+
+    map, searchBox, destination = "Sydney",
+    country = "Australia";
+
 
 
 function updateSearchBox() {
@@ -92,15 +97,27 @@ function showSearchMap() {
 
             destination = place.name;
             weatherFunc();
-            fillInfo();
             getImagesFunc();
-            console.log("Current Destination:" +destination);
+            console.log("Current Destination:" + destination);
+            console.log(place);
+            getCountryName(place);
+            fillInfo();
+
         });
         map.fitBounds(bounds);
 
     });
 }
 
+function getCountryName(place) {
+    for (var i = 0; i < place.address_components.length; i++) {
+        var addressType = place.address_components[i].types[0];
+        if (addressType == 'country') {
+            country = place.address_components[i]['long_name'];
+        }
+    }
+    console.log("Current country" + country);
+}
 
 function initAutocomplete() {
     console.log("Initializing auto complete and search boxes");

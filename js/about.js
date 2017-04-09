@@ -1,7 +1,10 @@
+var newsAPI = "65068dcb32b5464285ed0456bec9bdf8";
+var queryURL3 = "https://newsapi.org/v1/articles?source=" + newsSource + "&apiKey=" + newsAPI;
 // var countryName = "united states of america";
 
 function fillInfo() {
     // $("#info").on("click", function() {
+
     //countryName = $("#destination").val().trim();
     console.log(destination);
     var queryURL4 = " https://restcountries.eu/rest/v2/name/" + destination.toLowerCase();
@@ -11,6 +14,18 @@ function fillInfo() {
         method: "GET"
     }).done(function(response) {
         console.log(response);
+
+        //countryName = $("#destination").val().trim();
+        console.log("Information page: Got country ", country);
+        var queryURL4 = " https://restcountries.eu/rest/v2/name/" + country.toLowerCase();
+        console.log("Information page:  ", queryURL4);
+        $.ajax({
+            url: queryURL4,
+            method: "GET"
+        }).done(function(response) {
+            console.log(response);
+
+
 
         if (response.length > 1) {
             $("#country-flag").attr("src", response[1].flag);
@@ -39,12 +54,21 @@ function fillInfo() {
                 $(".country-timezone").html("TimeZone : " + response[0].timezones[1]);
             else
                 $(".country-timezone").html("TimeZone : " + response[0].timezones[0]);
+
         }
         // $("#current-currency").html(response[0].name + "<br>" + "Currency is " + response[0].currencies[0].name + " " + response[0].currencies[0].symbol + "<br>" + 
         //  "Capital is " + response[0].capital + "<br>" + 
         //  "Language is " + response[0].languages[0].name + "<br>" + 
         //  "TimeZone is " + response[0].timezones[0] + "<br>" + 
         //  "Population is " + response[0].population);
+
+
+            // $("#current-currency").html(response[0].name + "<br>" + "Currency is " + response[0].currencies[0].name + " " + response[0].currencies[0].symbol + "<br>" +
+            //  "Capital is " + response[0].capital + "<br>" +
+            //  "Language is " + response[0].languages[0].name + "<br>" +
+            //  "TimeZone is " + response[0].timezones[0] + "<br>" +
+            //  "Population is " + response[0].population);
+
 
         // });
     });
@@ -62,8 +86,7 @@ $.ajax({
     // $("#news-sources").html(response.sources[0].name + "<br>" + "<br>" + response.sources[0].description);
 
 });
-var newsAPI = "65068dcb32b5464285ed0456bec9bdf8";
-var queryURL3 = "https://newsapi.org/v1/articles?source=" + newsSource + "&apiKey=" + newsAPI;
+
 $.ajax({
     url: queryURL3,
     method: "GET"
@@ -74,3 +97,5 @@ $.ajax({
     $("#news-link").attr("href", response.articles[0].url)
 
 });
+
+fillInfo();
