@@ -1,4 +1,4 @@
-var placeSearch, autocomplete,
+var placeSearch, autocomplete, 
     map, searchBox, destination = "Sydney",
     country = "Australia",
     styledMapType;
