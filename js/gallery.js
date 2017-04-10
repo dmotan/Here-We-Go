@@ -43,17 +43,14 @@ function getImagesFunc() {
                 var height = response.data[i].height;
                 var width = response.data[i].width;
                 var ratio = width / height;
+                var nsfw = response.data[i].nsfw;
                 console.log('ratio '+ratio)
-                //ignore albums, gifs, etc
-                // if ((imgLink.includes(".jpg") || imgLink.includes(".png")) && (height >= 500) && (ratio > 1) && (ratio <2.5)) {
-                //     //push to imageLinkArr
-                //     imageLinkArr.push(imgLink);
-                // }
 
+                //ignore albums, gifs, etc
                 //using indexOf() instead of includes() for more browser support
- 
-                if ((imgLink.indexOf(".jpg") !==-1 || imgLink.indexOf(".png")!==-1) && (height >= 500) && (ratio > 1) && (ratio <2.5)) {
-                     //push to imageLinkArr
+
+                if ((imgLink.indexOf(".jpg") !==-1 || imgLink.indexOf(".png")!==-1) && (height >= 500) && (ratio > 1) && (ratio <2.5) && (nsfw === false)) {
+                    //push to imageLinkArr
                     imageLinkArr.push(imgLink);
                 }
             }

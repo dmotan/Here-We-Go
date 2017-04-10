@@ -28,6 +28,9 @@
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/typed.js" type="text/javascript"></script>
 </head>
 
 <body id="page-top" class="index">
@@ -75,18 +78,40 @@
                 <!-- <div class="intro-lead-in">Here We Go!</div> -->
                 <!-- <div class="intro-heading">It's Nice To Meet You</div> -->
                 <div class="row">
-                    <div ng-app="">
-                        <h1 ng-bind="name" style="color: white;">
-                    </h1>
-                        <form>
-                            <div class="form-group">
-                                <div class="col-lg-6 col-lg-offset-3">
-                                    <!-- <label for="destination"></label> -->
-                                    <input type="text" ng-model="name" class="controls form-control" id="autocomplete" placeholder="Where do you want to go?">
-                                </div>
-                            </div>
-                        </form>
+                    <!-- Banner -->
+                    <!-- load banner.js -->
+                    <script src="js/banner.js"></script>
+                    
+                     <div class="type-wrap">
+                     <span id="typed" style="white-space:pre;"></span>
+                    <div id="typed-strings">
+                        <p>UNITED STATES</p>
+                        <p>PALESTINE</p>
+                        <p>INDIA</p>
+                        <p>PHILIPPINES</p>
+                        <p>ITALY</p>
+                        <p>poland</p>
+                        <p>JORDAN</p>
+                        <p>FRANCE</p>
+                        <p>THAYLAND</p>
+                        <p>SOUTH AFRICA</p>
+                        <p>PERU</p>
+                        <p>TURKEY</p>
+                        <p>QATAR</p>
+                        <p>PANAMA</p>
+                        <p>JAPAN</p>
+                        <p>MALAYSIA</p>
                     </div>
+                    </div>
+                    <!-- END Banner -->
+                    <form>
+                        <div class="form-group">
+                            <div class="col-lg-6 col-lg-offset-3">
+                                <!-- <label for="destination"></label> -->
+                                <input type="text" class="controls form-control" id="autocomplete" placeholder="Where do you want to go?">
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <a href="#mapArea" class="page-scroll btn btn-xl" style="margin-top: 20px;">Here We Go</a>
             </div>
@@ -122,6 +147,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Gallery</h2>
+                    <h3 class="section-subheading text-muted" id="gallery-subheading"><p>Envision the perfect getaway. A snapshot of all the sights and and attractions of your next destination.</p>
                 </div>
             </div>
             <div class="row slider-row">
@@ -228,7 +254,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">@ Law ..please fill something here</h3>
+                    <p class="section-subheading text-muted">We are <strong>Team Here We Go!</strong> <!-- The best travel app of the RBC Feb 2017 --> </p>
                 </div>
             </div>
             <div class="row">
@@ -253,11 +279,11 @@
                         <h4>Lawrence Asperilla</h4>
                         <p class="text-muted">Full Stack Developer</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://twitter.com/lawrencecirilo"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://www.facebook.com/lawrence.asperilla"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/in/lawrenceasperilla"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -280,7 +306,15 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">@ Law ..please fill something here ..The best travel app in the RBC Feb 2017 ;)</p>
+                    <p class="large text-muted">Our mission is to create top-of-the-line digital products using the right technologies that perfectly support your design. We rely on a wide repertoire of web development tools.</p>
+                    <h3 class="section-subheading">
+                        <ul class="list-inline">
+                            <li>>>Front and Backend Web Development</li>
+                            <li>>>API Integration</li>
+                            <li>>>Javascript</li>
+                            <li>>>Node.js</li>
+                        </ul>
+                    </h3>
                 </div>
             </div>
         </div>
