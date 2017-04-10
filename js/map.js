@@ -1,8 +1,8 @@
-var placeSearch, autocomplete,
-
-
+var placeSearch, autocomplete, 
     map, searchBox, destination = "Sydney",
-    country = "Australia";
+    country = "Australia",
+    styledMapType;
+
 
 
 
@@ -19,8 +19,15 @@ function showSearchMap() {
             lng: 151.2195
         },
         zoom: 15,
-        mapTypeId: 'roadmap'
+        mapTypeControlOptions: {
+            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                'styled_map'
+            ]
+        }
+
     });
+    map.mapTypes.set('styled_map', styledMapType);
+    map.setMapTypeId('styled_map');
 
 
     var input = document.getElementById('pac-input');
@@ -46,9 +53,9 @@ function showSearchMap() {
         }
 
         // Clear out the old markers.
-        markers.forEach(function(marker) {
-            marker.setMap(null);
-        });
+        // markers.forEach(function(marker) {
+        //     marker.setMap(null);
+        // });
         markers = [];
 
         // For each place, get the icon, name and location.
@@ -58,6 +65,8 @@ function showSearchMap() {
                 console.log("Returned place contains no geometry");
                 return;
             }
+            var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+
             var icon = {
                 url: place.icon,
                 size: new google.maps.Size(71, 71),
@@ -67,20 +76,22 @@ function showSearchMap() {
             };
 
             // Create a marker for each place.
-            var marker = new google.maps.Marker({
-                map: map,
-                icon: icon,
-                title: place.name,
-                position: place.geometry.location,
-                animation: google.maps.Animation.BOUNCE
+            // var marker = new google.maps.Marker({
+            //     map: map,
+            //     icon: image,
+            //     title: place.name,
+            //     position: place.geometry.location,
+            //     animation: google.maps.Animation.BOUNCE
+            //
+            // });
+            // google.maps.event.addListener(marker, 'click', function() {
+            //     map.setZoom(9);
+            //     map.setCenter(marker.getPosition());
+            // });
+            // markers.push(marker);
 
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-                map.setZoom(9);
-                map.setCenter(marker.getPosition());
-            });
-            markers.push(marker);
-
+            map.mapTypes.set('styled_map', styledMapType);
+            map.setMapTypeId('styled_map');
 
 
             if (place.geometry.viewport) {
@@ -120,6 +131,10 @@ function getCountryName(place) {
 
 function initAutocomplete() {
     console.log("Initializing auto complete and search boxes");
+    styledMapType = new google.maps.StyledMapType(
+        style, {
+            name: 'Styled Map'
+        });
     // Create the autocomplete object, restricting the search to geographical
     // location types.
     showSearchMap();
@@ -139,3 +154,208 @@ function initAutocomplete() {
 $("form").submit(function(e) {
     e.preventDefault();
 });
+
+var style = [{
+        "elementType": "geometry",
+        "stylers": [{
+            "color": "#212121"
+        }]
+    },
+    {
+        "elementType": "labels.icon",
+        "stylers": [{
+            "visibility": "off"
+        }]
+    },
+    {
+        "elementType": "labels.text.fill",
+        "stylers": [{
+            "color": "#757575"
+        }]
+    },
+    {
+        "elementType": "labels.text.stroke",
+        "stylers": [{
+            "color": "#212121"
+        }]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry",
+        "stylers": [{
+            "color": "#757575"
+        }]
+    },
+    {
+        "featureType": "administrative.country",
+        "elementType": "labels.text.fill",
+        "stylers": [{
+            "color": "#9e9e9e"
+        }]
+    },
+    {
+        "featureType": "administrative.land_parcel",
+        "stylers": [{
+            "visibility": "off"
+        }]
+    },
+    {
+        "featureType": "administrative.locality",
+        "elementType": "labels.text.fill",
+        "stylers": [{
+            "color": "#bdbdbd"
+        }]
+    },
+    {
+        "featureType": "landscape.natural.landcover",
+        "stylers": [{
+                "color": "#804040"
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels.text.fill",
+        "stylers": [{
+            "color": "#757575"
+        }]
+    },
+    {
+        "featureType": "poi.attraction",
+        "stylers": [{
+                "color": "#ffff00"
+            },
+            {
+                "visibility": "simplified"
+            },
+            {
+                "weight": 6.5
+            }
+        ]
+    },
+    {
+        "featureType": "poi.attraction",
+        "elementType": "geometry.fill",
+        "stylers": [{
+            "visibility": "off"
+        }]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [{
+            "color": "#181818"
+        }]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "labels.text.fill",
+        "stylers": [{
+            "color": "#616161"
+        }]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "labels.text.stroke",
+        "stylers": [{
+            "color": "#1b1b1b"
+        }]
+    },
+    {
+        "featureType": "poi.place_of_worship",
+        "stylers": [{
+                "color": "#ffff00"
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.place_of_worship",
+        "elementType": "geometry",
+        "stylers": [{
+            "visibility": "simplified"
+        }]
+    },
+    {
+        "featureType": "poi.place_of_worship",
+        "elementType": "geometry.stroke",
+        "stylers": [{
+            "visibility": "simplified"
+        }]
+    },
+    {
+        "featureType": "poi.place_of_worship",
+        "elementType": "labels.icon",
+        "stylers": [{
+            "visibility": "off"
+        }]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.fill",
+        "stylers": [{
+            "color": "#2c2c2c"
+        }]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text.fill",
+        "stylers": [{
+            "color": "#8a8a8a"
+        }]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [{
+            "color": "#373737"
+        }]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [{
+            "color": "#3c3c3c"
+        }]
+    },
+    {
+        "featureType": "road.highway.controlled_access",
+        "elementType": "geometry",
+        "stylers": [{
+            "color": "#4e4e4e"
+        }]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "labels.text.fill",
+        "stylers": [{
+            "color": "#616161"
+        }]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "labels.text.fill",
+        "stylers": [{
+            "color": "#757575"
+        }]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [{
+            "color": "#000000"
+        }]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": [{
+            "color": "#3d3d3d"
+        }]
+    }
+];
