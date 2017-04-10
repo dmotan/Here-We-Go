@@ -1,7 +1,4 @@
 var placeSearch, autocomplete,
-
-    map, searchBox,destination ="jordan";
-
     map, searchBox, destination = "Sydney",
     country = "Australia";
 
@@ -20,8 +17,9 @@ function showSearchMap() {
             lng: 151.2195
         },
         zoom: 15,
-        mapTypeId: 'roadmap'
-    });
+        mapTypeId: 'roadmap',
+
+     });
 
 
     var input = document.getElementById('pac-input');
