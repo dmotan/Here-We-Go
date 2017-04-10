@@ -1,6 +1,5 @@
 var placeSearch, autocomplete,
 
-    map, searchBox,destination ="jordan";
 
     map, searchBox, destination = "Sydney",
     country = "Australia";
