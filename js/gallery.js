@@ -55,13 +55,9 @@ function getImagesFunc() {
                 }
             }
 
-            console.log(imageLinkArr);
-            console.log(response);
-            console.log('imgur json url ' + queryURL);
-
             shuffle(imageLinkArr);
-            console.log('image array '+imageLinkArr)
            
+            //replace placeholder image src in gallery carousel
             for (var i = 0; i < imageLinkArr.length; i++) {
                 $("#img" + i).attr("src", imageLinkArr[i]);
             }
@@ -69,6 +65,7 @@ function getImagesFunc() {
         }); //end ajax
     }; //end of ajaxFunc
 
+    //q=travel+destination > food+des > photography+des > ""+des hopefully pull 10 images by this point
     ajaxFunc("travel");
 
     if (imageLinkArr.length < 10) {
