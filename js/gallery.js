@@ -39,12 +39,10 @@ function getImagesFunc() {
             //loop until it goes through full json or until our array has 10 img links. shorter of the 2
             for (var i = 0; i < response.data.length && imageLinkArr.length < 10; i++) {
                 var imgLink = response.data[i].link.slice(0, 4) + "s" + response.data[i].link.slice(4,-4)+ "h" + response.data[i].link.slice(response.data[i].link.length - 4);
-                console.log('imglink ' + imgLink)
                 var height = response.data[i].height;
                 var width = response.data[i].width;
                 var ratio = width / height;
                 var nsfw = response.data[i].nsfw;
-                console.log('ratio '+ratio)
 
                 //ignore albums, gifs, etc
                 //using indexOf() instead of includes() for more browser support
