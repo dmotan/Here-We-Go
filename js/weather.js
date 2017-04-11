@@ -21,9 +21,9 @@ function weatherFunc() {
 
         //build div with parsed weather info
         var weatherDiv = $("<div>");
-        weatherDiv.addClass("panel panel-default weather-display");
+        weatherDiv.addClass("panel panel-default weather-display weather-opacity");
         var panelHeading = $("<div>");
-        panelHeading.addClass("panel-heading panel-title weather-title");
+        panelHeading.addClass("panel-heading panel-title weather-title weather-opacity");
         panelHeading.text(city + " Weather");
         var panelBody = $("<div>");
         panelBody.addClass("panel-body");
@@ -33,7 +33,7 @@ function weatherFunc() {
         currentTemp.addClass("temperature");
         currentTemp.attr({ "data-tempf": temp, "data-tempc": tempC, "data-feelsLikef": feelsLike, "data-feelsLikeC": feelsLikeC, "data-state": "F" });
         currentTemp.html("Current Temperature: " + temp + "°F<br>" + "Feels Like: " + feelsLike + "°F<br>");
-        currentTemp.prepend("<span class=\"weather-tooltiptext\">Click to switch between Fahrenheit and Celsius.</span>");
+        // currentTemp.prepend("<span class=\"weather-tooltiptext\">Click to switch between Fahrenheit and Celsius.</span>");
 
         panelBody.append(weatherIcon);
         panelBody.append("<br>Current Weather: " + weather + "<br>");
@@ -93,11 +93,11 @@ $("#weather").on("click", "span", function() {
 
     if (state === "F") {
         $(this).html("Current Temperature: "+ $(this).attr("data-tempc") + "°C<br>" +"Feels Like: " +$(this).attr("data-feelsLikeC")+"°C<br>");
-        $(this).prepend("<span class=\"weather-tooltiptext\">Click to switch between Fahrenheit and Celsius.</span>");
+        // $(this).prepend("<span class=\"weather-tooltiptext\">Click to switch between Fahrenheit and Celsius.</span>");
         $(this).attr("data-state", "C");
     } else {
         $(this).html("Current Temperature: "+ $(this).attr("data-tempf") + "°F<br>" +"Feels Like: " +$(this).attr("data-feelsLikef")+"°F<br>");
-        $(this).prepend("<span class=\"weather-tooltiptext\">Click to switch between Fahrenheit and Celsius.</span>");
+        // $(this).prepend("<span class=\"weather-tooltiptext\">Click to switch between Fahrenheit and Celsius.</span>");
         $(this).attr("data-state", "F");
     }
 });

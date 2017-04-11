@@ -901,6 +901,14 @@ body {
     visibility: visible;
 }
 
+.weather-opacity {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.weather-title-opacity {
+    background: rgba(245, 245, 245, 0.9);
+}
+
 .carousel-inner img {
     width: auto;
     height: 400px;
