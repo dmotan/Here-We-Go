@@ -26,11 +26,7 @@ p.large {
     font-size: 16px;
 }
 
-a,
-a:hover,
-a:focus,
-a:active,
-a.active {
+a, a:hover, a:focus, a:active, a.active {
     outline: none;
 }
 
@@ -38,19 +34,11 @@ a {
     color: #fed136;
 }
 
-a:hover,
-a:focus,
-a:active,
-a.active {
+a:hover, a:focus, a:active, a.active {
     color: #fec503;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -77,37 +65,17 @@ h6 {
     font-weight: 700;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active,
-.open .dropdown-toggle.btn-primary {
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
     color: white;
     background-color: #fec503;
     border-color: #f6bf01;
 }
 
-.btn-primary:active,
-.btn-primary.active,
-.open .dropdown-toggle.btn-primary {
+.btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
     background-image: none;
 }
 
-.btn-primary.disabled,
-.btn-primary[disabled],
-fieldset[disabled] .btn-primary,
-.btn-primary.disabled:hover,
-.btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary:hover,
-.btn-primary.disabled:focus,
-.btn-primary[disabled]:focus,
-fieldset[disabled] .btn-primary:focus,
-.btn-primary.disabled:active,
-.btn-primary[disabled]:active,
-fieldset[disabled] .btn-primary:active,
-.btn-primary.disabled.active,
-.btn-primary[disabled].active,
-fieldset[disabled] .btn-primary.active {
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
     background-color: #fed136;
     border-color: #fed136;
 }
@@ -129,37 +97,17 @@ fieldset[disabled] .btn-primary.active {
     padding: 20px 40px;
 }
 
-.btn-xl:hover,
-.btn-xl:focus,
-.btn-xl:active,
-.btn-xl.active,
-.open .dropdown-toggle.btn-xl {
+.btn-xl:hover, .btn-xl:focus, .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
     color: white;
     background-color: #fec503;
     border-color: #f6bf01;
 }
 
-.btn-xl:active,
-.btn-xl.active,
-.open .dropdown-toggle.btn-xl {
+.btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
     background-image: none;
 }
 
-.btn-xl.disabled,
-.btn-xl[disabled],
-fieldset[disabled] .btn-xl,
-.btn-xl.disabled:hover,
-.btn-xl[disabled]:hover,
-fieldset[disabled] .btn-xl:hover,
-.btn-xl.disabled:focus,
-.btn-xl[disabled]:focus,
-fieldset[disabled] .btn-xl:focus,
-.btn-xl.disabled:active,
-.btn-xl[disabled]:active,
-fieldset[disabled] .btn-xl:active,
-.btn-xl.disabled.active,
-.btn-xl[disabled].active,
-fieldset[disabled] .btn-xl.active {
+.btn-xl.disabled, .btn-xl[disabled], fieldset[disabled] .btn-xl, .btn-xl.disabled:hover, .btn-xl[disabled]:hover, fieldset[disabled] .btn-xl:hover, .btn-xl.disabled:focus, .btn-xl[disabled]:focus, fieldset[disabled] .btn-xl:focus, .btn-xl.disabled:active, .btn-xl[disabled]:active, fieldset[disabled] .btn-xl:active, .btn-xl.disabled.active, .btn-xl[disabled].active, fieldset[disabled] .btn-xl.active {
     background-color: #fed136;
     border-color: #fed136;
 }
@@ -179,10 +127,7 @@ fieldset[disabled] .btn-xl.active {
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 
-.navbar-custom .navbar-brand:hover,
-.navbar-custom .navbar-brand:focus,
-.navbar-custom .navbar-brand:active,
-.navbar-custom .navbar-brand.active {
+.navbar-custom .navbar-brand:hover, .navbar-custom .navbar-brand:focus, .navbar-custom .navbar-brand:active, .navbar-custom .navbar-brand.active {
     color: #fec503;
 }
 
@@ -199,8 +144,7 @@ fieldset[disabled] .btn-xl.active {
     font-size: 12px;
 }
 
-.navbar-custom .navbar-toggle:hover,
-.navbar-custom .navbar-toggle:focus {
+.navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus {
     background-color: #fed136;
 }
 
@@ -212,8 +156,7 @@ fieldset[disabled] .btn-xl.active {
     color: white;
 }
 
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus {
+.navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus {
     color: #fed136;
     outline: none;
 }
@@ -224,8 +167,7 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fed136;
 }
 
-.navbar-custom .navbar-nav>.active>a:hover,
-.navbar-custom .navbar-nav>.active>a:focus {
+.navbar-custom .navbar-nav>.active>a:hover, .navbar-custom .navbar-nav>.active>a:focus {
     color: white;
     background-color: #fec503;
 }
@@ -392,8 +334,7 @@ section h3.section-subheading {
     margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3, #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
     margin: 0;
 }
 
@@ -450,8 +391,7 @@ section h3.section-subheading {
     min-height: 50px;
 }
 
-.timeline>li:before,
-.timeline>li:after {
+.timeline>li:before, .timeline>li:after {
     content: " ";
     display: table;
 }
@@ -535,8 +475,7 @@ section h3.section-subheading {
     text-transform: none;
 }
 
-.timeline .timeline-body>p,
-.timeline .timeline-body>ul {
+.timeline .timeline-body>p, .timeline .timeline-body>ul {
     margin-bottom: 0;
 }
 
@@ -653,8 +592,7 @@ section#weather .form-group {
     margin-bottom: 25px;
 }
 
-section#weather .form-group input,
-section#weather .form-group textarea {
+section#weather .form-group input, section#weather .form-group textarea {
     padding: 20px;
 }
 
@@ -744,16 +682,11 @@ ul.social-buttons li a {
     transition: all 0.3s;
 }
 
-ul.social-buttons li a:hover,
-ul.social-buttons li a:focus,
-ul.social-buttons li a:active {
+ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active {
     background-color: #fed136;
 }
 
-.btn:focus,
-.btn:active,
-.btn.active,
-.btn:active:focus {
+.btn:focus, .btn:active, .btn.active, .btn:active:focus {
     outline: none;
 }
 
@@ -955,7 +888,11 @@ body {
 
 #mapArea {
     padding-top: 50px;
-    /*background-image: url('../img/m.jpg');*/
+    background: -moz-linear-gradient(left, rgba(76,76,76,1) 0%, rgba(17,17,17,1) 7%, rgba(17,17,17,1) 7%, rgba(89,89,89,1) 12%, rgba(17,17,17,1) 36%, rgba(17,17,17,1) 36%, rgba(17,17,17,1) 41%, rgba(17,17,17,1) 41%, rgba(44,44,44,1) 50%, rgba(43,43,43,1) 76%, rgba(102,102,102,1) 86%, rgba(28,28,28,1) 94%, rgba(28,28,28,1) 100%, rgba(19,19,19,1) 100%); /* FF3.6-15 
+    background: -webkit-linear-gradient(left, rgba(76,76,76,1) 0%,rgba(17,17,17,1) 7%,rgba(17,17,17,1) 7%,rgba(89,89,89,1) 12%,rgba(17,17,17,1) 36%,rgba(17,17,17,1) 36%,rgba(17,17,17,1) 41%,rgba(17,17,17,1) 41%,rgba(44,44,44,1) 50%,rgba(43,43,43,1) 76%,rgba(102,102,102,1) 86%,rgba(28,28,28,1) 94%,rgba(28,28,28,1) 100%,rgba(19,19,19,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(76,76,76,1) 0%,rgba(17,17,17,1) 7%,rgba(17,17,17,1) 7%,rgba(89,89,89,1) 12%,rgba(17,17,17,1) 36%,rgba(17,17,17,1) 36%,rgba(17,17,17,1) 41%,rgba(17,17,17,1) 41%,rgba(44,44,44,1) 50%,rgba(43,43,43,1) 76%,rgba(102,102,102,1) 86%,rgba(28,28,28,1) 94%,rgba(28,28,28,1) 100%,rgba(19,19,19,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */*/
+     Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#21b4e2+0,b7deed+5,b7deed+5,b7deed+8,b7deed+10,b7deed+10,21b4e2+49,21b4e2+49,21b4e2+72,21b4e2+83,b7deed+88,b7deed+88,b7deed+92,21b4e2+99
+
 }
 
 #information {
@@ -981,6 +918,7 @@ body {
 
 .mapSection {
     width: 90%;
+    margin : 0px auto;
 }
 
 .slider {
@@ -1027,7 +965,6 @@ body {
   height: 500px;
 }*/
 
-
 #gallery {
     background-color: #f7f7f7;
     padding-top: 70px;
@@ -1037,7 +974,6 @@ body {
     font-family: Montserrat;
     font-size: 20px;
     /*font-weight: bold;*/
-
     display: block;
     background-color: #f7f7f7;
 }
