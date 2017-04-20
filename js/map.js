@@ -216,7 +216,7 @@ function updateSearchBox() {
 }
 
 function showSearchMap() {
-    console.log("Inside showSearchMap");
+    // console.log("Inside showSearchMap");
     // intialize map
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {
@@ -250,8 +250,8 @@ function showSearchMap() {
     // Listen for the event fired when the user selects a prediction and retrieve
     // more details for that place.
     searchBox.addListener('places_changed', function() {
-        console.log("search box places changed !!");
-        console.log(arguments);
+        // console.log("search box places changed !!");
+        // console.log(arguments);
         var places = searchBox.getPlaces();
 
         if (places.length == 0) {
@@ -268,7 +268,7 @@ function showSearchMap() {
         var bounds = new google.maps.LatLngBounds();
         places.forEach(function(place) {
             if (!place.geometry) {
-                console.log("Returned place contains no geometry");
+                // console.log("Returned place contains no geometry");
                 return;
             }
             var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
@@ -298,7 +298,7 @@ function showSearchMap() {
 
             destination = place.name;
 
-            console.log("Current Destination:" + destination);
+            // console.log("Current Destination:" + destination);
             getCountryName(place);
             updateOtherPages();
 
@@ -325,11 +325,11 @@ function getCountryName(place) {
             country = place.address_components[i]['long_name'];
         }
     }
-    console.log("Current country" + country);
+    // console.log("Current country" + country);
 }
 
 function initAutocomplete() {
-    console.log("Initializing auto complete and search boxes");
+    // console.log("Initializing auto complete and search boxes");
     styledMapType = new google.maps.StyledMapType(
         style, {
             name: 'Attractions'
